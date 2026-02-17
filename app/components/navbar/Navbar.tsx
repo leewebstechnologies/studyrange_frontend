@@ -23,13 +23,10 @@ const Navbar = () => {
       <ul className={styles.list}>
         <li className={styles.listItem}>
           <Link
-            className={clsx(
-              styles.item,
-              currentPath === "/" && styles.active,
-            )}
+            className={clsx(styles.item, currentPath === "/" && styles.active)}
             href="/"
           >
-            HOME
+            Home
           </Link>
         </li>
         <li className={styles.listItem}>
@@ -40,7 +37,7 @@ const Navbar = () => {
             )}
             href="/about"
           >
-            ABOUT US
+            About Us
           </Link>
         </li>
         <li className={styles.listItem}>
@@ -51,7 +48,7 @@ const Navbar = () => {
             )}
             href="/services"
           >
-            SERVICES
+            Services
           </Link>
         </li>
         <li className={styles.listItem}>
@@ -62,7 +59,7 @@ const Navbar = () => {
             )}
             href="/study"
           >
-            STUDY MATCH
+            Study Match
           </Link>
         </li>
         <li className={styles.listItem}>
@@ -73,7 +70,7 @@ const Navbar = () => {
             )}
             href="/university"
           >
-            UNIVERSITY
+            University
           </Link>
         </li>
         <li className={styles.listItem}>
@@ -84,7 +81,7 @@ const Navbar = () => {
             )}
             href="/scholarship"
           >
-            SCHOLARSHIP
+            Scholarship
           </Link>
         </li>
         <li className={styles.listItem}>
@@ -95,23 +92,33 @@ const Navbar = () => {
             )}
             href="/resources"
           >
-            RESOURCES
+            Resources
           </Link>
         </li>
-      </ul>
-      
-     <ul className={styles.link}>
-        <li className={styles.linkItem}>
-          <Link className={styles.linkItemCargo} href="/">
-            CARGO SERVICES
-          </Link>
-        </li>
-        <li className={styles.linkItem}>
+
+        <li className={styles.listItem}>
           <Link
-            className={styles.linkItemContact}
-            href="/contact"
+            href="https://studyrangeconsult.com"
+            className={clsx(
+              styles.item,
+              styles.highlight,
+              currentPath === "/cargo" && styles.active,
+            )}
           >
-            CONTACT
+            Cargo Services
+          </Link>
+        </li>
+
+        <li className={styles.listItem}>
+          <Link
+            href="/contact"
+            className={clsx(
+              styles.item,
+              styles.highlight,
+              currentPath === "/contact" && styles.active,
+            )}
+          >
+            Contact Us
           </Link>
         </li>
       </ul>
@@ -137,47 +144,33 @@ const Navbar = () => {
           </Link>
         </li>
         <li className={styles.menuItem}>
-          <Link className={styles.item} href="/portfolio">
-            Portfolio
+          <Link className={styles.item} href="/services">
+            Services
           </Link>
         </li>
         <li className={styles.menuItem}>
-          <Link className={styles.item} href="/blog">
-            Blog
+          <Link className={styles.item} href="/study">
+            Study Match
+          </Link>
+        </li>
+        <li className={styles.menuItem}>
+          <Link className={styles.item} href="/university">
+            University
+          </Link>
+        </li>
+        <li className={styles.menuItem}>
+          <Link className={styles.item} href="/scholarship">
+            Scholarship
+          </Link>
+        </li>
+        <li className={styles.menuItem}>
+          <Link className={styles.item} href="/cargo">
+            Cargo Services
           </Link>
         </li>
         <li className={styles.menuItem}>
           <Link className={styles.item} href="/contact">
             Contact Us
-          </Link>
-        </li>
-        <li className={styles.menuItem}>
-          <Link
-            className={styles.icon}
-            href="https://web.facebook.com/Lacreteconcept"
-          >
-            <i className="icon fa-brands fa-square-facebook"></i>
-          </Link>
-        </li>
-        <li className={styles.menuItem}>
-          <Link
-            className={styles.icon}
-            href="https://www.tiktok.com/@lacrete_concept?_t=ZM-8tR5goUupDp&_r=1"
-          >
-            <i className="icon fa-brands fa-tiktok"></i>
-          </Link>
-        </li>
-        <li className={styles.menuItem}>
-          <Link
-            className={styles.icon}
-            href="https://www.instagram.com/lacrete2025"
-          >
-            <i className="icon fa-brands fa-square-instagram"></i>
-          </Link>
-        </li>
-        <li className={styles.menuItem}>
-          <Link className={styles.icon} href="https://wa.me/+2348028752742">
-            <i className="icon fa-brands fa-square-whatsapp"></i>
           </Link>
         </li>
       </ul>
