@@ -1,0 +1,134 @@
+.container {
+  width: 100%;
+  height: 50px;
+  background-color: #f2ecf0;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  z-index: 2000;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+.logo {
+  margin-left: 42px;
+}
+
+.list {
+  margin: 0;
+}
+
+/* NAV LINK */
+.item {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+}
+
+.active {
+  color: #000;
+
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 45px;
+  height: 2px;
+  background-color: #b7a17a;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.listItem {
+  display: inline;
+  margin-right: 30px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.socialMediaIcons {
+  margin: 0;
+  display: flex;
+}
+
+.socialMediaIcon {
+  display: inline;
+  margin-right: 30px;
+}
+
+.icon {
+  color: #25b60f;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.icon:hover {
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+
+
+
+
+@media screen and (max-width: 991px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .list, .socialMediaIcon {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+  }
+
+  .menu {
+    position: fixed;
+    height: calc(100vh - 50px);
+    width: 50vw;
+    background-color: #000;
+    top: 50px;
+    font-weight: bold;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 999;
+    right: 0;
+    transition: all 1s ease;
+  }
+
+  
+}
