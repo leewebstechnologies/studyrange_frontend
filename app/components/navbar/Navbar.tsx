@@ -100,37 +100,22 @@ const Navbar = () => {
         </li>
       </ul>
       
-      <ul className={styles.socialMediaIcons}>
-        <li className={styles.socialMediaIcon}>
-          <Link className={styles.icon} href="https://wa.me/+2348028752742">
-            <i className="icon fa-brands fa-square-whatsapp"></i>
+     <ul className={styles.link}>
+        <li className={styles.linkItem}>
+          <Link className={styles.linkItemCargo} href="/">
+            CARGO SERVICES
           </Link>
         </li>
-        <li className={styles.socialMediaIcon}>
+        <li className={styles.linkItem}>
           <Link
-            className={styles.icon}
-            href="https://www.tiktok.com/@lacrete_concept?_t=ZM-8tR5goUupDp&_r=1"
+            className={styles.linkItemContact}
+            href="/contact"
           >
-            <i className="icon fa-brands fa-tiktok"></i>
-          </Link>
-        </li>
-        <li className={styles.socialMediaIcon}>
-          <Link
-            className={styles.icon}
-            href="https://www.instagram.com/lacrete2025"
-          >
-            <i className="icon fa-brands fa-square-instagram"></i>
-          </Link>
-        </li>
-        <li className={styles.socialMediaIcon}>
-          <Link
-            className={styles.icon}
-            href="https://web.facebook.com/Lacreteconcept"
-          >
-            <i className="icon fa-brands fa-square-facebook"></i>
+            CONTACT
           </Link>
         </li>
       </ul>
+
       <div className={styles.hamburger} onClick={() => setOpen(!open)}>
         <div className={styles.line} />
         <div className={styles.line} />

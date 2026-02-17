@@ -34,7 +34,6 @@
 
 .active {
   color: #000;
-
 }
 
 .active::after {
@@ -56,25 +55,13 @@
   text-decoration: none;
 }
 
-.socialMediaIcons {
-  margin: 0;
+.link {
   display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-.socialMediaIcon {
-  display: inline;
-  margin-right: 30px;
-}
 
-.icon {
-  color: #25b60f;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.icon:hover {
-  color: #fff;
-}
 
 .hamburger {
   display: none;
@@ -84,16 +71,13 @@
   display: none;
 }
 
-
-
-
-
 @media screen and (max-width: 991px) {
   .container {
     padding: 0 20px;
   }
 
-  .list, .socialMediaIcon {
+  .list,
+  .socialMediaIcon {
     display: none;
   }
 
@@ -129,6 +113,4 @@
     right: 0;
     transition: all 1s ease;
   }
-
-  
 }
