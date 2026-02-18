@@ -4,7 +4,7 @@ import styles from "./navbar.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import clsx from 'clsx';
+import clsx from "clsx";
 
 const Navbar = () => {
   const currentPath = usePathname();
