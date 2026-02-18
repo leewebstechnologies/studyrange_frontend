@@ -133,4 +133,7 @@
     right: 0;
     transition: all 1s ease;
   }
+  .listItem {
+    font-size: 12px;
+  }
 }
