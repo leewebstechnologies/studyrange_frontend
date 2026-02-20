@@ -128,10 +128,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: start;
+    gap: 30px;
     z-index: 999;
     right: 0;
     transition: all 1s ease;
+  }
+
+  .menuItem {
+    margin-top: 20px;
   }
   .listItem {
     font-size: 12px;
