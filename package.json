@@ -9,10 +9,21 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "animate.css": "^4.1.1",
+    "axios": "^1.13.5",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.34.3",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-fast-marquee": "^1.6.5",
+    "react-paginate": "^8.3.0",
+    "react-slick": "^0.31.0",
+    "react-spinners": "^0.17.0",
+    "sass": "^1.97.3",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^12.1.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

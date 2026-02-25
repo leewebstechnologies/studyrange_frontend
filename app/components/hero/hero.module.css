@@ -1,0 +1,113 @@
+
+.heroImage {
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.heroCards {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: flex-start;
+}
+
+.heroCardsTop {
+  background-color: #fff;
+  margin-left: 637px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.star {
+  margin-left: 17px;
+  margin-right: 8px;
+}
+
+.heroCardsTopText {
+  font-size: 14px;
+  margin-right: 16px;
+  margin-top: 11px;
+  margin-bottom: 11px;
+  color: #374151;
+  font-family: Inter, sans-serif;
+  font-weight: bolder;
+}
+
+.heroCardsLeft {
+  width: min(688px, 100%);
+  padding: 2rem;
+  border-radius: 24px;
+
+  /* glassmorphism */
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  margin-left: 52px;
+}
+
+.heroCardLabel {
+  margin-left: 47px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 22px;
+  border-radius: 999px;
+
+  /* Gradient like the image */
+  background: linear-gradient(
+    90deg,
+    #8b4a6a 0%,
+    #9b6b7f 40%,
+    #c3ad84 100%
+  );
+
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  /* Soft depth */
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+  margin-bottom: 25px;
+  white-space: nowrap;
+}
+
+.heroCardTopText {
+  margin-left: 47px;
+  color: #7e436d;
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+}
+
+.heroCardBottomText {
+  color: #4b5563;
+  margin-top: 3px;
+  margin-left: 47px;
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+}
+
+.heroCardButtonContainer {
+  display: flex;
+}
+
+.studyMatch {
+  background-color: #9b6b7f;
+  color: #ffffff;
+}
+
+
+
+
