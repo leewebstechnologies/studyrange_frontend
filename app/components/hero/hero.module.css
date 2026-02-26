@@ -54,8 +54,11 @@
   margin-left: 52px;
 }
 
+.heroCardsLeftContents {
+ margin-left: 47px;
+}
+
 .heroCardLabel {
-  margin-left: 47px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -84,8 +87,13 @@
   white-space: nowrap;
 }
 
+.heroCardLabel span {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .heroCardTopText {
-  margin-left: 47px;
   color: #7e436d;
   font-size: 24px;
   font-family: "Inter", sans-serif;
@@ -94,18 +102,116 @@
 .heroCardBottomText {
   color: #4b5563;
   margin-top: 3px;
-  margin-left: 47px;
   font-size: 24px;
   font-family: "Inter", sans-serif;
 }
 
-.heroCardButtonContainer {
+
+
+
+
+.topButtons {
   display: flex;
+  align-items: center;
+  margin-right: 16px;
+   background: linear-gradient(
+    135deg,
+    #6f3a5b 0%,
+    #8a4b6a 45%,
+    #9b5a76 100%
+  );
+  color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(111, 58, 91, 0.35);
+  border: none;
+  
 }
 
-.studyMatch {
-  background-color: #9b6b7f;
-  color: #ffffff;
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 11px;
+}
+
+.primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+   background: linear-gradient(
+    90deg,
+    #7b3a6a 0%,
+    #8a4b6f 40%,
+    #9a6b6b 70%,
+    #b39a6a 100%
+  );
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(123, 58, 106, 0.35);
+}
+
+.primaryText, .secondaryText {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+
+
+.secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(123, 58, 106, 0.35);
+}
+
+.secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: rgba(255, 255, 255, 0.6);
+  border: 2px solid #c5b28a;
+  color: #9a835c;
+  padding: 14px 22px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.apply {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+  background-color: #ad9f7d;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.apply:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(123, 58, 106, 0.35);
 }
 
 
