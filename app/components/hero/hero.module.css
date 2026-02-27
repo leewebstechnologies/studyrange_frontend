@@ -1,4 +1,3 @@
-
 .heroImage {
   position: relative;
   width: 100%;
@@ -30,6 +29,7 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
+  flex: 1; /* important */
 }
 
 .star {
@@ -51,8 +51,6 @@
   width: min(688px, 100%);
   padding: 2rem;
   border-radius: 24px;
-
-  /* glassmorphism */
   background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -71,11 +69,8 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-
   padding: 12px 22px;
   border-radius: 999px;
-
-  /* Gradient like the image */
   background: linear-gradient(
     90deg,
     #8b4a6a 0%,
@@ -114,8 +109,6 @@
   font-size: 24px;
   font-family: "Inter", sans-serif;
 }
-
-
 
 
 
@@ -223,11 +216,23 @@
   box-shadow: 0 12px 25px rgba(123, 58, 106, 0.35);
 }
 
-.ratingItems {
-  display: flex;
+.rating {
   background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 9px;
 }
 
+.ratingItems {
+  display: flex;
+
+  /* margin: 25px; */
+  
+}
+
+.ratingImage {
+  margin-right: 16px;
+}
 .ratingText {
   display: flex;
   flex-direction: column;
@@ -235,6 +240,28 @@
   font-family: "Inter", sans-serif;
 }
 
+.whatsapp {
+  align-self: flex-end;
+  margin-bottom: 27px;
+}
+
+.consultContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+
+  width: 60px;
+  height: 58px;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  border: 2px solid #c5b28a;
+}
+
+.consult {
+  margin: 0; /* remove offsets */
+}
 .ratingNumber {
   font-size: 30px;
   font-weight: bold;
@@ -246,6 +273,11 @@
 }
 
 .heroCardsRight {
+  margin-right: 58px;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+
+  margin-top: auto; 
 }

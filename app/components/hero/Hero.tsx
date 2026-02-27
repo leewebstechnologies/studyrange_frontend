@@ -94,7 +94,7 @@ const Hero = () => {
             <div className={styles.rating}>
               <div className={styles.ratingItems}>
                 <Image
-                  className={styles.rating}
+                  className={styles.ratingImage}
                   src="/images/hero/rating.png"
                   alt="star"
                   width={64}
@@ -106,13 +106,16 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-            <Image
-              className={styles.consult}
-              src="/images/hero/consult.png"
-              alt="star"
-              width={14}
-              height={20}
-            />
+            <div className={styles.consultContainer}>
+              <Image
+                className={styles.consult}
+                src="/images/hero/consult.png"
+                alt="star"
+                width={27}
+                height={29}
+              />
+            </div>
+           
           </div>
         </div>
       </div>
