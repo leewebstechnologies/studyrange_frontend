@@ -214,6 +214,29 @@
   box-shadow: 0 12px 25px rgba(123, 58, 106, 0.35);
 }
 
+.ratingItems {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+}
 
+.ratingText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+}
 
+.ratingNumber {
+  font-size: 30px;
+  font-weight: bold;
+  color: #1F2937;
+}
 
+.studentRating {
+  color: #4b5563;
+}
+
+.heroCardsRight {
+  display: flex;
+  flex-direction: column;
+}

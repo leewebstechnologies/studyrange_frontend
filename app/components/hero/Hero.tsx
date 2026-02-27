@@ -80,6 +80,31 @@ const Hero = () => {
             </button>
           </div>
         </div>
+
+        <div className={styles.heroCardsRight}>
+          <Image
+            className={styles.whatsapp}
+            src="/images/hero/whatsapp.png"
+            alt="star"
+            width={62}
+            height={62}
+          />
+          <div className={styles.rating}>
+            <div className={styles.ratingItems}>
+              <Image
+                className={styles.rating}
+                src="/images/hero/rating.png"
+                alt="star"
+                width={64}
+                height={64}
+              />
+              <div className={styles.ratingText}>
+                <span className={styles.ratingNumber}>4.9</span>
+                <p className={styles.studentRating}>Student Rating</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
