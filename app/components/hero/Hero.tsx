@@ -34,7 +34,7 @@ const Hero = () => {
               <div className={styles.heroCardLabel}>
                 <Image
                   src="/images/hero/star.png"
-                  alt=""
+                  alt="star"
                   width={18}
                   height={24}
                 />

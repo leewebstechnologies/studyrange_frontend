@@ -10,7 +10,6 @@
   margin: 0 auto 2.5rem;
   font-size: 0.95rem;
   color: #6b7280;
-  line-height: 1.6;
 }
 
 .card {
@@ -19,42 +18,64 @@
   padding: 2rem;
 }
 
-.formGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
+/* MAIN LAYOUT */
+.layout {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
-.field {
+/* LEFT SIDE */
+.left {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  gap: 16px;
+}
+
+/* Study + Subject */
+.topGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* WHITE CARDS */
+.smallCard,
+.largeCard {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem;
   text-align: left;
 }
 
-.field label {
-  font-size: 0.75rem;
-  font-weight: 500;
-  margin-bottom: 0.35rem;
-  color: #6b7280;
+.largeCard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
-.field select,
-.field input {
-  padding: 0.75rem 0.85rem;
+/* FIELDS */
+.label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.select,
+.input {
+  width: 100%;
+  padding: 0.75rem;
   border-radius: 0.6rem;
   border: none;
+  background: #f9fafb;
   font-size: 0.85rem;
-  background: #ffffff;
-  outline: none;
 }
 
-.field select:focus,
-.field input:focus {
-  box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.3);
-}
-
-.cta {
-  margin-top: 2rem;
+/* RIGHT SIDE */
+.right {
+  min-width: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,43 +83,69 @@
 }
 
 .button {
-  background: linear-gradient(135deg, #7c3aed, #9333ea);
-  color: #fff;
-  border: none;
-  padding: 0.85rem 2.25rem;
-  border-radius: 0.75rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  gap: 8px;
+  padding: 14px 22px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 20px;               /* ⬅ optional: slightly smaller text */
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  background: linear-gradient(90deg, #7b3a6a, #b39a6a);
+  color: #fff;
+  border: none;
 }
 
-.button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.35);
+.buttonI {
+  margin-right: 12px;
 }
 
 .secure {
-  font-size: 0.7rem;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
   color: #6b7280;
+  display: flex;
+  align-items: center;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .formGrid {
-    grid-template-columns: repeat(2, 1fr);
+.secureI {
+  margin-right: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    align-items: stretch;
   }
-}
 
-@media (max-width: 640px) {
-  .formGrid {
+  .largeCard {
     grid-template-columns: 1fr;
   }
 
-  .card {
-    padding: 1.5rem;
+  .right {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .topGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .largeCard {
+    grid-template-columns: 1fr;
+  }
+
+  .right {
+    align-items: center;
   }
 }
