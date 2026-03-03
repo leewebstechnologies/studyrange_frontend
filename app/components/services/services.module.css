@@ -92,7 +92,12 @@
 }
 
 .button:hover {
-  background: #7e436d;
+   background: linear-gradient(
+    135deg,
+    #7b3f61 0%,
+    #9a6f78 45%,
+    #c1b07b 100%
+  );
   color: #ffffff;
 }
 
