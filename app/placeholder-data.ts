@@ -16,24 +16,29 @@ const services = [
   },
 ];
 
-const whyChoose = [
+const choose = [
   {
     title: "Expert Guidance",
-    desc: "15+ years of experience helping students make the right academic choices",
+    description:
+      "15+ years of experience helping students achieve their UK study dreams",
+    image: "/images/choose/1.png",
   },
   {
     title: "Partner Network",
-    desc: "Direct partnerships with top universities and colleges",
+    description:
+      "Direct partnerships with 100+ top UK universities and colleges",
+    image: "/images/choose/2.png",
   },
   {
     title: "Personalized Support",
-    desc: "One-on-one counseling tailored to your goals and background",
+    description: "One-on-one counseling tailored to your goals and background",
+    image: "/images/choose/3.png",
   },
   {
     title: "95% Success Rate",
-    desc: "Proven track record of successful admissions",
+    description: "Proven track record of successful university admissions",
+    image: "/images/choose/4.png",
   },
 ];
 
-
-export { services, whyChoose };
+export { services, choose };

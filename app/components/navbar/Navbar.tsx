@@ -1,180 +1,96 @@
 "use client";
-import Link from "next/link";
-import styles from "./navbar.module.css";
-import Image from "next/image";
-import { useState } from "react";
-import { usePathname } from "next/navigation";
-import clsx from "clsx";
 
-const Navbar = () => {
-  const currentPath = usePathname();
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import clsx from "clsx";
+import styles from "./navbar.module.css";
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/services", label: "Services" },
+  { href: "/study", label: "Study Match" },
+  { href: "/university", label: "University" },
+  { href: "/scholarship", label: "Scholarship" },
+  { href: "/resources", label: "Resources" },
+];
+
+export default function Navbar() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
   return (
-    <div className={styles.container}>
-      <Link href="/">
+    <header className={styles.navbar}>
+      {/* Logo */}
+      <Link href="/" className={styles.logoWrap}>
         <Image
-          className={styles.logo}
           src="/images/logo.png"
-          alt="logo"
+          alt="Logo"
           width={211}
           height={36}
+          priority
         />
       </Link>
-      <ul className={styles.list}>
-        <li className={styles.listItem}>
-          <Link
-            className={clsx(styles.item, currentPath === "/" && styles.active)}
-            href="/"
-          >
-            Home
-          </Link>
-        </li>
-        <li className={styles.listItem}>
-          <Link
-            className={clsx(
-              styles.item,
-              currentPath === "/about" && styles.active,
-            )}
-            href="/about"
-          >
-            About Us
-          </Link>
-        </li>
-        <li className={styles.listItem}>
-          <Link
-            className={clsx(
-              styles.item,
-              currentPath === "/services" && styles.active,
-            )}
-            href="/services"
-          >
-            Services
-          </Link>
-        </li>
-        <li className={styles.listItem}>
-          <Link
-            className={clsx(
-              styles.item,
-              currentPath === "/study" && styles.active,
-            )}
-            href="/study"
-          >
-            Study Match
-          </Link>
-        </li>
-        <li className={styles.listItem}>
-          <Link
-            className={clsx(
-              styles.item,
-              currentPath === "/university" && styles.active,
-            )}
-            href="/university"
-          >
-            University
-          </Link>
-        </li>
-        <li className={styles.listItem}>
-          <Link
-            className={clsx(
-              styles.item,
-              currentPath === "/scholarship" && styles.active,
-            )}
-            href="/scholarship"
-          >
-            Scholarship
-          </Link>
-        </li>
-        <li className={styles.listItem}>
-          <Link
-            className={clsx(
-              styles.item,
-              currentPath === "/resources" && styles.active,
-            )}
-            href="/resources"
-          >
-            Resources
-          </Link>
-        </li>
 
-        <li className={styles.listItem}>
+      {/* Desktop Navigation */}
+      <nav className={styles.nav}>
+        {navLinks.map((link) => (
           <Link
-            href="https://studyrangeconsult.com"
+            key={link.href}
+            href={link.href}
             className={clsx(
-              styles.item,
-              styles.highlight,
-              currentPath === "/cargo" && styles.active,
+              styles.link,
+              pathname === link.href && styles.active,
             )}
           >
-            Cargo Services
+            {link.label}
           </Link>
-        </li>
+        ))}
+      </nav>
 
-        <li className={styles.listItem}>
-          <Link
-            href="/contact"
-            className={clsx(
-              styles.item,
-              styles.highlight,
-              currentPath === "/contact" && styles.active,
-            )}
-          >
-            Contact Us
-          </Link>
-        </li>
-      </ul>
-
-      <div className={styles.hamburger} onClick={() => setOpen(!open)}>
-        <div className={styles.line} />
-        <div className={styles.line} />
-        <div className={styles.line} />
+      {/* Desktop CTA */}
+      <div className={styles.actions}>
+        <Link
+          href="https://studyrangeconsult.com"
+          className={clsx(styles.link, styles.highlight)}
+        >
+          Cargo Services
+        </Link>
+        <Link href="/contact" className={clsx(styles.link, styles.highlight)}>
+          Contact Us
+        </Link>
       </div>
-      <ul
-        onClick={() => setOpen(false)}
-        className={styles.menu}
-        style={{ right: open ? "0px" : "-50vw" }}
+
+      {/* Hamburger */}
+      <button
+        className={clsx(styles.hamburger, open && styles.open)}
+        onClick={() => setOpen(!open)}
+        aria-label="Toggle menu"
       >
-        <li className={styles.menuItem}>
-          <Link className={styles.item} href="/">
-            Home
+        <span />
+        <span />
+        <span />
+      </button>
+
+      {/* Mobile Drawer */}
+      <aside className={clsx(styles.drawer, open && styles.show)}>
+        {[
+          ...navLinks,
+          { href: "/cargo", label: "Cargo Services" },
+          { href: "/contact", label: "Contact Us" },
+        ].map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            onClick={() => setOpen(false)}
+            className={styles.drawerLink}
+          >
+            {link.label}
           </Link>
-        </li>
-        <li className={styles.menuItem}>
-          <Link className={styles.item} href="/about">
-            About Us
-          </Link>
-        </li>
-        <li className={styles.menuItem}>
-          <Link className={styles.item} href="/services">
-            Services
-          </Link>
-        </li>
-        <li className={styles.menuItem}>
-          <Link className={styles.item} href="/study">
-            Study Match
-          </Link>
-        </li>
-        <li className={styles.menuItem}>
-          <Link className={styles.item} href="/university">
-            University
-          </Link>
-        </li>
-        <li className={styles.menuItem}>
-          <Link className={styles.item} href="/scholarship">
-            Scholarship
-          </Link>
-        </li>
-        <li className={styles.menuItem}>
-          <Link className={styles.item} href="/cargo">
-            Cargo Services
-          </Link>
-        </li>
-        <li className={styles.menuItem}>
-          <Link className={styles.item} href="/contact">
-            Contact Us
-          </Link>
-        </li>
-      </ul>
-    </div>
+        ))}
+      </aside>
+    </header>
   );
-};
-export default Navbar;
+}

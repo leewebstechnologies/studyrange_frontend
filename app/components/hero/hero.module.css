@@ -208,6 +208,7 @@
     align-items: center;
     animation: none;
     margin-top: -80px;
+    animation: floatUpDown 4s ease-in-out infinite;
   }
 
   .heroCardsTop {
