@@ -41,4 +41,46 @@ const choose = [
   },
 ];
 
-export { services, choose };
+const successStories = [
+  {
+    name: "Oliver Matthews",
+    school: "University of Manchester — MSc Advanced Computer Science",
+    image: "/images/success/oliver.png",
+  },
+  {
+    name: "Aisha Rahman",
+    school: "King’s College London — MSc Global Health",
+    image: "/images/success/aishah.png",
+  },
+  {
+    name: "Joshua Bennett",
+    school: "London School of Economics (LSE) — MSc Finance",
+    image: "/images/success/rahman.png",
+  },
+];
+
+const liveAcceptances = [
+  {
+    name: "Daniel Whitmore",
+    school: "University of Cambridge",
+    time: "2 hours ago",
+  },
+  {
+    name: "Fatima Noor",
+    school: "University of Bristol",
+    time: "2 hours ago",
+  },
+  {
+    name: "Samuel Okafor",
+    school: "University of Leeds",
+    time: "2 hours ago",
+  },
+  {
+    name: "Hannah Collins",
+    school: "University of Warwick",
+    time: "2 hours ago",
+  },
+];
+
+
+export { services, choose, successStories, liveAcceptances };

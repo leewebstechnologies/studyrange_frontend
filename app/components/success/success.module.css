@@ -1,0 +1,108 @@
+.section {
+  padding: 5rem 1.5rem;
+  background: linear-gradient(
+  180deg,
+  #f7f3ec 0%,
+  #f2ede4 100%
+);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #0f172a;
+}
+
+/* Success Stories */
+.storyList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.storyCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.storyCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.storyCard h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.storyCard p {
+  font-size: 0.9rem;
+  color: #a37b4d;
+}
+
+/* Acceptance Wall */
+.acceptanceList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.acceptanceCard {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.acceptanceCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.emoji {
+  font-size: 1.3rem;
+}
+
+.acceptanceCard h4 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.acceptanceCard p {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
