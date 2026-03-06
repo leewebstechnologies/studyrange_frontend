@@ -1,0 +1,178 @@
+.footer {
+  background: linear-gradient(
+    135deg,
+    #7e436d,
+    #9a6f5f
+  );
+  color: white;
+  padding: 70px 20px 30px;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+}
+
+/* BRAND */
+
+.brand p {
+  margin-top: 16px;
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 260px;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoRow h3 {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* LINKS */
+
+.links h4 {
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+
+.links ul {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.links a:hover {
+  opacity: 0.7;
+}
+
+/* CONTACT */
+
+.contact h4 {
+  margin-bottom: 14px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: rgba(255,255,255,0.85);
+}
+
+.contactItem span {
+  text-decoration: underline;
+  font-size: 14px;
+
+}
+
+/* SOCIALS */
+
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.socials svg {
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.socials svg:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+/* DIVIDER */
+
+.divider {
+  margin: 40px 0 20px;
+  height: 1px;
+  background: rgba(255,255,255,0.25);
+}
+
+/* BOTTOM */
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bottom p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+}
+
+.legal {
+  display: flex;
+  gap: 20px;
+}
+
+.legal a {
+  font-size: 13px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.85);
+}
+
+.legal a:hover {
+  opacity: 0.7;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 30px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .footer {
+    padding: 60px 20px 30px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .legal {
+    justify-content: center;
+  }
+
+}

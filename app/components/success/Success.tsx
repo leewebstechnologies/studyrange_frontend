@@ -11,7 +11,6 @@ const Success = () => {
         {/* Left Column */}
         <div>
           <h2 className={styles.title}>Success Stories</h2>
-
           <div className={styles.storyList}>
             {successStories.map((item, index) => (
               <article key={index} className={styles.storyCard}>

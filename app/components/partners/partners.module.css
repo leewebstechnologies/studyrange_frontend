@@ -1,0 +1,80 @@
+.section {
+  padding: 5rem 1.5rem;
+  background: linear-gradient(
+  180deg,
+  #f7f3ec 0%,
+  #f2ede4 100%
+);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.text {
+  color: #64748b;
+  margin-bottom: 3rem;
+}
+
+/* GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+/* CARD */
+
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+/* LOGO */
+
+.logo {
+  width: 90px;
+  height: 90px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+/* TEXT */
+
+.name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.rank {
+  font-size: 0.9rem;
+  color: #64748b;
+}

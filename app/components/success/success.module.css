@@ -19,7 +19,7 @@
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  color: #0f172a;
+  color: #000;
 }
 
 /* Success Stories */
@@ -100,9 +100,64 @@
   margin-top: 0.25rem;
 }
 
+.partners {
+  margin: 4rem auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+  background: linear-gradient(
+    180deg,
+    #efe6dc 0%,
+  )
+}
+
+.card h3 {
+  color: #7e436d;
+}
+
+.partnersTitle,
+.text {
+  margin: 0;
+}
+
+.cardContainer {
+  display: flex;
+  gap: 20px;
+}
+.text {
+  color: #4b5563;
+}
+
+.card {
+  background: #fff;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+
 /* Responsive */
 @media (max-width: 900px) {
   .container {
     grid-template-columns: 1fr;
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .title {
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
   }
 }

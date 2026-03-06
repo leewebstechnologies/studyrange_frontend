@@ -82,5 +82,50 @@ const liveAcceptances = [
   },
 ];
 
+const partners = [
+  {
+    logo: "/images/partners/aston.png",
+    name: "Aston University",
+    rank: "#2 World Ranking",
+  },
+  {
+    logo: "/images/partners/bournemouth.png",
+    name: "Bournemouth University",
+    rank: "#3 UK Ranking",
+  },
+  {
+    logo: "/images/partners/bradford.png",
+    name: "University of Bradford",
+    rank: "#Top for Socials",
+  },
+  {
+    logo: "/images/partners/bristol.png",
+    name: "University of Bristol",
+    rank: "#61 World Ranking",
+  },
+  {
+    logo: "/images/partners/brunel.jpg",
+    name: "University of Brunel",
+    rank: "#15 World Ranking",
+  },
+];
 
-export { services, choose, successStories, liveAcceptances };
+const acceptances = [
+  {
+    id: 1,
+    name: "Sarah M.",
+    text: "Just got accepted to Cambridge for Computer Science!",
+    time: "2 minutes ago",
+    avatar: "/images/acceptance/sarah.png",
+  },
+  {
+    id: 2,
+    name: "James K.",
+    text: "Imperial College London - Engineering with scholarship!",
+    time: "5 minutes ago",
+    avatar: "/images/acceptance/james.png",
+  },
+];
+
+
+export { services, choose, successStories, liveAcceptances, acceptances, partners };
