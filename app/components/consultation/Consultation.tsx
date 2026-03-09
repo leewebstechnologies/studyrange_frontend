@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./consultation.module.css";
-import { Calendar, Phone } from "lucide-react";
+// import { Calendar, Phone } from "lucide-react";
 
 const Consultation = () => {
   return (
@@ -26,12 +26,13 @@ const Consultation = () => {
 
           <div className={styles.actions}>
             <button className={styles.primaryBtn}>
-              <Calendar size={18} />
+              <i className="fa-solid fa-calendar" style={{fontSize: "18px"}}></i>
+              {/* <Calendar size={18} /> */}
               Book Free Consultation
             </button>
 
             <Link href="tel:+44123456789" className={styles.secondaryBtn}>
-              <Phone size={18} />
+               <i className="fa-solid fa-phone" style={{ fontSize: "18px" }}></i>
               Call Now: +44 123 456 789
             </Link>
           </div>

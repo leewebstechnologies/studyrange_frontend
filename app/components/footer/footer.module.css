@@ -43,6 +43,21 @@
   text-decoration: underline;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.logo h3 {
+  display: flex;
+  align-items: center;
+  margin-top: -12px;
+}
+
 /* LINKS */
 
 .links h4 {
@@ -87,6 +102,14 @@
   text-decoration: underline;
   font-size: 14px;
 
+}
+
+.contactLink {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
 /* SOCIALS */

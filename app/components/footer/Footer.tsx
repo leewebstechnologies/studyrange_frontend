@@ -3,16 +3,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./footer.module.css";
-import {
-  Phone,
-  Mail,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-} from "lucide-react";
+// import {
+//   Phone,
+//   Mail,
+//   Facebook,
+//   Twitter,
+//   Instagram,
+//   Linkedin,
+// } from "lucide-react";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -21,13 +22,16 @@ const Footer = () => {
           {/* BRAND */}
           <div className={styles.brand}>
             <div className={styles.logoRow}>
-              <Image
-                src="/images/footerLogo.png"
-                alt="Studyrange Consult"
-                width={48}
-                height={48}
-              />
-              <h3>STUDYRANGE CONSULT</h3>
+              <Link href="/" className={styles.logo}>
+                <Image
+                  src="/images/footerLogo.png"
+                  alt="Studyrange Consult"
+                  width={48}
+                  height={48}
+                />
+                <h3>STUDYRANGE CONSULT</h3>
+              </Link>
+              
             </div>
 
             <p>
@@ -79,25 +83,69 @@ const Footer = () => {
             <h4>Contact</h4>
 
             <p className={styles.contactItem}>
-              <Phone size={16} />
+              <i className="fa-solid fa-phone" style={{ fontSize: "16px" }}></i>
               +44 744 854 1193
             </p>
 
             <p className={styles.contactItem}>
-              <Phone size={16} />
-             <span>+234 809 999 1995</span> 
+              <i className="fa-solid fa-phone" style={{ fontSize: "16px" }}></i>
+              +234 809 999 1995
             </p>
 
             <p className={styles.contactItem}>
-              <Mail size={16} />
-              <span>info@studyrangeconsult.com</span> 
+              <i
+                className="fa-solid fa-envelope"
+                style={{ fontSize: "16px" }}
+              ></i>
+              <Link
+                className={styles.contactLink}
+                href="mailto:info@studyrangeconsult.com"
+              >
+                <span>info@studyrangeconsult.com</span>
+              </Link>
             </p>
 
             <div className={styles.socials}>
-              <Facebook size={18} />
-              <Twitter size={18} />
-              <Instagram size={18} />
-              <Linkedin size={18} />
+              <Link
+                className={styles.contactLink}
+                href="https://www.facebook.com/studyrangeconsult"
+                target="_blank"
+              >
+                <i
+                  className="fa-brands fa-facebook"
+                  style={{ fontSize: "18px" }}
+                ></i>
+              </Link>
+              <Link
+                className={styles.contactLink}
+                href="https://twitter.com/studyrangeconsult"
+                target="_blank"
+              >
+                <i
+                  className="fa-brands fa-x-twitter"
+                  style={{ fontSize: "18px" }}
+                ></i>
+              </Link>
+              <Link
+                className={styles.contactLink}
+                href="https://www.instagram.com/studyrangeconsult/"
+                target="_blank"
+              >
+                <i
+                  className="fa-brands fa-instagram"
+                  style={{ fontSize: "18px" }}
+                ></i>
+              </Link>
+              <Link
+                className={styles.contactLink}
+                href="https://www.linkedin.com/company/studyrange-consult/"
+                target="_blank"
+              >
+                <i
+                  className="fa-brands fa-linkedin"
+                  style={{ fontSize: "18px" }}
+                ></i>
+              </Link>
             </div>
           </div>
         </div>
@@ -107,7 +155,7 @@ const Footer = () => {
 
         {/* BOTTOM BAR */}
         <div className={styles.bottom}>
-          <p>© 2026 Studyrange Consult. All rights reserved.</p>
+          <p>© {year} Studyrange Consult. All rights reserved.</p>
 
           <div className={styles.legal}>
             <Link href="#">Privacy Policy</Link>
