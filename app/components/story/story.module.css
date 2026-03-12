@@ -1,0 +1,51 @@
+.story {
+  background-color: #f9fafb;
+  display: flex;
+}
+
+.storyLeft {
+  flex: 1;
+  margin: 80px 0 8px 104px;
+}
+
+.title {
+  margin-bottom: 28px;
+  color: #7e436d;
+  font-size: 36px;
+}
+
+.paragraph {
+  color: #4b5563;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.storyRight {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frame {
+  width: 564px;
+  height: 564px;
+  background: #f3f3f3;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 97px 0 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+   box-shadow: 
+    0 6px 12px rgba(0, 0, 0, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
