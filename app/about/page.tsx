@@ -1,4 +1,6 @@
 import Story from "../components/story/Story";
+import Mv from "../components/mv/Mv";
+import Value from "../components/value/Value";
 import styles from "./about.module.css";
 
 const About = () => {
@@ -18,6 +20,8 @@ const About = () => {
       <div className={styles.circleTwo}></div>
     </div>
     <Story />
+    <Mv />
+    <Value />
     </>
     
   );

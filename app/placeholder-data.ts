@@ -45,17 +45,17 @@ const successStories = [
   {
     name: "Oliver Matthews",
     school: "University of Manchester — MSc Advanced Computer Science",
-    image: "/images/success/oliver.png",
+    image: "/images/acceptance/sarah.png",
   },
   {
     name: "Aisha Rahman",
     school: "King’s College London — MSc Global Health",
-    image: "/images/success/aishah.png",
+    image: "/images/acceptance/sarah.png",
   },
   {
     name: "Joshua Bennett",
     school: "London School of Economics (LSE) — MSc Finance",
-    image: "/images/success/rahman.png",
+    image: "/images/acceptance/sarah.png",
   },
 ];
 

@@ -14,13 +14,15 @@ const Success = () => {
           <div className={styles.storyList}>
             {successStories.map((item, index) => (
               <article key={index} className={styles.storyCard}>
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  width={64}
-                  height={64}
-                  className={styles.avatar}
-                />
+                <div className={styles.avatarWrapper}>
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={64}
+                    height={64}
+                    className={styles.avatar}
+                  />
+                </div>
 
                 <div>
                   <h4>{item.name}</h4>
