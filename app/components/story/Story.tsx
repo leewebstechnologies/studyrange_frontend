@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import styles from "./story.module.css";
 import Image from "next/image";
 
@@ -72,14 +73,15 @@ const Story = () => {
             alt="consult"
             className={styles.consult}
           />
-
-          <Image
-            src="/images/about/whatsapp.png"
-            width={56}
-            height={56}
-            alt="whatsapp"
-            className={styles.whatsapp}
-          />
+          <Link href="https://wa.me/+2348099991995">
+            <Image
+              src="/images/about/whatsapp.png"
+              width={56}
+              height={56}
+              alt="whatsapp"
+              className={styles.whatsapp}
+            />
+          </Link>
         </div>
       </div>
     </section>

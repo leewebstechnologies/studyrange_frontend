@@ -11,7 +11,7 @@ const OurPartners = () => {
             <Image
               src="/images/about/icon1.png"
               alt="calendar icon"
-              width={24}
+              width={21}
               height={32}
               className={styles.iconImage}
             />
@@ -25,7 +25,7 @@ const OurPartners = () => {
               src="/images/about/icon2.png"
               alt="calendar icon"
               width={24}
-              height={32}
+              height={24}
               className={styles.iconImage}
             />
           </div>
@@ -38,7 +38,7 @@ const OurPartners = () => {
               src="/images/about/icon3.png"
               alt="calendar icon"
               width={24}
-              height={32}
+              height={24}
               className={styles.iconImage}
             />
           </div>
@@ -50,7 +50,7 @@ const OurPartners = () => {
             <Image
               src="/images/about/icon4.png"
               alt="calendar icon"
-              width={24}
+              width={30}
               height={32}
               className={styles.iconImage}
             />
