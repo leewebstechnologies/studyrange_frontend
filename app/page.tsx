@@ -6,7 +6,6 @@ import Success from "./components/success/Success";
 import Partners from "./components/partners/Partners";
 import Acceptance from "./components/acceptance/Acceptance";
 import Consultation from "./components/consultation/Consultation";
-import Footer from "./components/footer/Footer";
 
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
     <Partners />
     <Acceptance />
     <Consultation />
-    <Footer />
     </>
   );
 }

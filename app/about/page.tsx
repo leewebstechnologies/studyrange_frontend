@@ -1,7 +1,11 @@
 import Story from "../components/story/Story";
 import Mv from "../components/mv/Mv";
 import Value from "../components/value/Value";
+import Team from "../components/team/Team";
 import styles from "./about.module.css";
+import Journey from "../components/journey/Journey";
+import OurPartners from "../components/ourPartners/OurPartners";
+
 
 const About = () => {
   return (
@@ -22,6 +26,9 @@ const About = () => {
     <Story />
     <Mv />
     <Value />
+    <Team />
+    <Journey />
+    <OurPartners />
     </>
     
   );

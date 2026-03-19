@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 import { inter } from "./ui/fonts";
 // import { inter } from "@/app/ui/fonts";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

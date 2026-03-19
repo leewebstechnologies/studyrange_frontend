@@ -1,0 +1,92 @@
+.team {
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #7e436d;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* CARD */
+.card {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+/* IMAGE */
+.imageWrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #ffffff; /* white circle */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 16px auto; /* center it */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); /* optional */
+}
+
+.image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* TEXT */
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 6px;
+}
+
+.role {
+  font-size: 13px;
+  color: #7e436d;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 13px;
+  color: #6b6b6b;
+  line-height: 1.6;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+}
