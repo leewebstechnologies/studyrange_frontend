@@ -3,23 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 import styles from "./services.module.css";
-import { User, Users, CheckCircle2, Clock, ChevronDown, Calendar } from "lucide-react";
+import { ChevronDown, CheckCircle2} from "lucide-react";
 
-const WhatsappIcon = () => (
-  <svg
-    width="22"
-    height="22"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M3 21l1.65-3.8A9 9 0 1 1 20 8.04 8.9 8.9 0 0 1 12 21H3z" />
-    <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
-  </svg>
-);
 
 const servicesData = [
   {
@@ -143,6 +128,7 @@ const Services = () => {
   return (
     <div className={styles.servicesPage}>
       <div className={styles.backgroundBlob} />
+      <div className={styles.topLeftCircle} />
       
       <div className={styles.container}>
         <div className={styles.header}>
@@ -182,7 +168,13 @@ const Services = () => {
               
               <div className={styles.cardTop}>
                 <div className={styles.cardIcon}>
-                  <User size={32} />
+                  <Image
+                    src="/images/services/user.png"
+                    width={64}
+                    height={64}
+                    alt="user"
+                    className={styles.user}
+                  />
                 </div>
                 <div className={styles.cardHeaderContent}>
                   <h2 className={styles.cardTitle}>{service.title}</h2>
@@ -192,7 +184,13 @@ const Services = () => {
 
               <div>
                 <div className={styles.sectionLabel}>
-                  <Users size={20} />
+                  <Image
+                    src="/images/services/users.png"
+                    width={20}
+                    height={20}
+                    alt="users"
+                    className={styles.users}
+                  />
                   <span>Our Process</span>
                 </div>
                 <div className={styles.processGrid}>
@@ -211,13 +209,19 @@ const Services = () => {
               <div className={styles.infoBoxes}>
                 <div className={styles.infoBox}>
                   <div className={styles.sectionLabel}>
-                    <CheckCircle2 size={20} />
+                    <Image
+                    src="/images/services/checkcircle2.png"
+                    width={18}
+                    height={18}
+                    alt="checkcircle2"
+                    className={styles.users}
+                    />
                     <span>Requirements</span>
                   </div>
                   <ul className={styles.list}>
                     {service.requirements.map((req, reqIdx) => (
                       <li key={reqIdx} className={styles.listItem}>
-                        <CheckCircle2 size={16} fill="currentColor" className={styles.listIcon} />
+                        <CheckCircle2 size={5} fill="currentColor" className={styles.listIcon} />
                         <span>{req}</span>
                       </li>
                     ))}
@@ -226,7 +230,13 @@ const Services = () => {
 
                 <div className={styles.infoBox}>
                   <div className={styles.sectionLabel}>
-                    <Clock size={20} />
+                    <Image
+                      src="/images/services/clock.png"
+                      width={18}
+                      height={18}
+                      alt="clock"
+                      className={styles.users}
+                    />
                     <span>Timeline</span>
                   </div>
                   <div>

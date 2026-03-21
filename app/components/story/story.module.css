@@ -55,6 +55,21 @@
   height: auto;
 }
 
+/* .frame {
+  width: 552px;
+  height: 552px;
+  border-radius: 14px;
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 487px;
+  height: 469px;
+} */
+
 /* BOTTOM ELEMENTS */
 .storyRightBottom {
   margin-top: 500px;
