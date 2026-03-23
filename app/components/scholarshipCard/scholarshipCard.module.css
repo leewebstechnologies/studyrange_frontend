@@ -1,0 +1,184 @@
+.page {
+  padding: 40px 20px;
+  background: #faf9fa;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+/* TOP */
+.topSection {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.circleBg {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: #cbb6c9;
+  border-radius: 50%;
+  top: -40px;
+  left: -40px;
+  z-index: 0;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.statCard {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  width: 150px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.statCard h3 {
+  margin: 8px 0 4px;
+}
+
+.statCard p {
+  font-size: 12px;
+  color: #777;
+}
+
+.statIcon {
+  width: 24px;
+  height: 24px;
+  background: #eee;
+  border-radius: 6px;
+}
+
+/* FILTERS */
+.filters {
+  margin-top: 20px;
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.filters input,
+.filters select {
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heart {
+  cursor: pointer;
+}
+
+/* BADGES */
+.badges {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.badges div {
+  background: #f4f4f4;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* SECTION */
+.section {
+  margin-top: 12px;
+}
+
+.section h4 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.section ul {
+  padding-left: 18px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* TAGS */
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tags span {
+  background: #eee;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* BUTTONS */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.primary {
+  background: #6b3c63;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.secondary {
+  background: #b6a17d;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+}

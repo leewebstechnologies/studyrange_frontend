@@ -1,0 +1,469 @@
+.universityPage {
+  font-family: var(--font-inter, sans-serif);
+  color: #333;
+  /* padding-bottom: 80px; */
+  position: relative;
+  overflow: hidden;
+  background-color: #fcfbfa;
+  position: relative;
+}
+
+/* Search Container */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 24px 5%;
+  background-color: #fff;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.searchInputWrapper {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 8px 16px;
+  flex: 1;
+  max-width: 400px;
+  transition: border-color 0.3s ease;
+}
+
+.searchInputWrapper:focus-within {
+  border-color: #997087;
+}
+
+.searchIcon {
+  color: #999;
+  margin-right: 8px;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+}
+
+.searchInput::placeholder {
+  color: #bbb;
+}
+
+.dropdowns {
+  display: flex;
+  gap: 16px;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.dropdown:hover {
+  border-color: #d0d0d0;
+}
+
+.selectDropdown {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 8px 32px 8px 16px;
+  font-size: 14px;
+  color: #444;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+}
+
+.selectIcon {
+  position: absolute;
+  right: 12px;
+  pointer-events: none;
+  color: #888;
+}
+
+
+.topLeftCircle {
+  position: absolute;
+  top: -120px;        /* pulls it up behind the search bar */
+  left: -60px;        /* slightly off screen like Figma */
+  width: 280px;       /* smaller size like design */
+  height: 280px;
+  background-color: #F3EDF4; /* softer tone */
+  border-radius: 50%;
+  z-index: 0;         /* behind searchContainer */
+}
+
+/* Main Content Background */
+.mainContent {
+  position: relative;
+  padding: 40px 5%;
+}
+
+.topRightCircle {
+  position: absolute;
+  top: 10px;          /* aligns under search bar */
+  right: 40px;       /* slightly off screen */
+  width: 220px;
+  height: 220px;
+  background-color: #EAE2D6; /* beige tone from design */
+  border-radius: 50%;
+  z-index: 0;         /* behind the stats card */
+}
+
+.bgCircleBottomRight {
+  position: absolute;
+  bottom: -150px;
+  right: -50px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(234, 225, 210, 0.55) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Top Section (Map & Box Stats) */
+.topSection {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+  position: relative;
+  z-index: 2;
+  margin-top: 83px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #8D5A7B;
+  margin-bottom: 20px;
+}
+
+.mapSection {
+  flex: 2;
+  padding: 0;             
+  background: transparent;
+  box-shadow: none;       
+}
+
+.mapTitle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  font-size: 18px;
+  font-weight: 600;
+  color: #8D5A7B;
+}
+.mapContainer {
+  position: relative;
+  height: 432px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05); /* soft inner border */
+}
+
+.mapImage {
+  filter: brightness(0.9) contrast(1.1);
+  transition: transform 0.5s ease;
+  border-radius: 14px;
+  height: 432px;
+  width: 100%;
+}
+
+.mapContainer:hover .mapImage {
+  transform: scale(1.02);
+}
+
+.mapOverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 240, 230, 0.35) 0%, rgba(255, 255, 255, 0) 50%, rgba(180, 200, 255, 0.25) 100%);
+  pointer-events: none;
+}
+
+/* Map Pins */
+.pin {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: radial-gradient(circle at top left, #bdaaa0, #8D5A7B);
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.85);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+  transform: translate(-50%, -50%);
+  animation: floatPin 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatPin {
+  0% { transform: translate(-50%, -50%) translateY(0); }
+  100% { transform: translate(-50%, -50%) translateY(-5px); }
+}
+
+.pinDot {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.pin::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 7px 5px 0;
+  border-style: solid;
+  border-color: #8D5A7B transparent transparent transparent;
+}
+
+/* Stats Cards Right Side */
+.statsSection {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.03);
+}
+
+.statsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 336px;
+}
+
+.statCard {
+  background-color: #F8F3F6;
+  flex: 1;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.statCard:hover {
+  background-color: #F3EAEF;
+  transform: translateY(-2px);
+}
+
+.statCard h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #8D5A7B;
+  margin-bottom: 2px;
+}
+
+.statCard p {
+  font-size: 13px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Featured Universities */
+.featuredSection {
+  padding: 0 5% 40px;
+}
+
+.featuredTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: #8D5A7B;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  transform: translateY(-4px);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.uniName {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4A2B3D;
+  flex: 1;
+  padding-right: 20px;
+  margin-top: -4px; /* Align nicer with top edge */
+}
+
+.imageContainer {
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.uniImage {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.card:hover .uniImage {
+  transform: scale(1.05);
+}
+
+.description {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.tag {
+  background-color: #F8F3F6;
+  color: #8D5A7B;
+  font-size: 11px;
+  padding: 6px 14px;
+  border-radius: 20px; /* Fully rounded pill */
+  font-weight: 600;
+}
+
+.metrics {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.metric {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.metricValue {
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.metricLabel {
+  font-size: 11px;
+  color: #999;
+}
+
+.viewBtn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #8D5A7B, #A79576);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  font-size: 14px;
+}
+
+.viewBtn:hover {
+  opacity: 0.95;
+  box-shadow: 0 6px 15px rgba(141, 90, 123, 0.3);
+  transform: translateY(-1px);
+}
+
+.floatingButtons {      /* stick to screen */
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;             /* controls spacing between buttons */
+  z-index: 100;
+  margin-right: 50px;
+}
+
+.floatingBtnWhatsapp,
+.floatingBtnConsult {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .topSection {
+    flex-direction: column;
+  }
+  .mapSection {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .searchContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .searchInputWrapper {
+    max-width: 100%;
+  }
+  .dropdowns {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .dropdown {
+    flex: 1;
+    justify-content: center;
+  }
+  .bgCircleTopLeft, .bgCircleBottomRight {
+    display: none;
+  }
+}
+
+
+

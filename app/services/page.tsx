@@ -209,13 +209,13 @@ const Services = () => {
               <div className={styles.infoBoxes}>
                 <div className={styles.infoBox}>
                   <div className={styles.sectionLabel}>
-                    <Image
+                  <Image
                     src="/images/services/checkcircle2.png"
                     width={18}
                     height={18}
                     alt="checkcircle2"
                     className={styles.users}
-                    />
+                  />
                     <span>Requirements</span>
                   </div>
                   <ul className={styles.list}>

@@ -11,10 +11,8 @@
 
   padding: 0 3rem;
   font-family: "Poppins", sans-serif;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
 }
 
-/* Logo */
 .logoWrap {
   display: flex;
   align-items: center;
