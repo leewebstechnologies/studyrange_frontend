@@ -97,13 +97,13 @@
 
 .topLeftCircle {
   position: absolute;
-  top: -120px;        /* pulls it up behind the search bar */
-  left: -60px;        /* slightly off screen like Figma */
-  width: 280px;       /* smaller size like design */
+  top: -120px;       
+  left: -60px;        
+  width: 280px;      
   height: 280px;
-  background-color: #F3EDF4; /* softer tone */
+  background-color: #F3EDF4; 
   border-radius: 50%;
-  z-index: 0;         /* behind searchContainer */
+  z-index: 0;      
 }
 
 /* Main Content Background */
@@ -413,13 +413,13 @@
   transform: translateY(-1px);
 }
 
-.floatingButtons {      /* stick to screen */
+.floatingButtons {    
   bottom: 30px;
   right: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 16px;             /* controls spacing between buttons */
+  gap: 16px;      
   z-index: 100;
   margin-right: 50px;
 }
