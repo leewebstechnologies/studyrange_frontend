@@ -53,7 +53,7 @@ export default function Navbar() {
       {/* Desktop CTA */}
       <div className={styles.actions}>
         <Link
-          href="https://studyrangeconsult.com"
+          href="/cargo"
           className={clsx(styles.link, styles.highlight)}
         >
           Cargo Services

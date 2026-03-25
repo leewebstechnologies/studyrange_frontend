@@ -1,0 +1,506 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: inherit;
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
+
+/* Background Shapes */
+.blobTopLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background-color: #DFCDD8;
+  border-bottom-right-radius: 100%;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.blobCenterBottom {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 450px;
+  background-color: #EFDFF0;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  color: #8B5A79;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.header p {
+  color: #666;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Info Cards Top */
+.infoCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.infoCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.iconWrapper.purple { background-color: #8B5A79; }
+.iconWrapper.gold { background-color: #C0A983; }
+.iconWrapper.green { background-color: #2DCA73; }
+.iconWrapper.blue { background-color: #4A90E2; }
+
+.infoCard h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.infoCard p {
+  font-size: 0.9rem;
+  color: #666;
+  white-space: pre-wrap;
+}
+
+/* Middle Layout */
+.middleSection {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .middleSection {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Form Section */
+.formCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.formCard h2 {
+  color: #8B5A79;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.formCard p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.inputField, .textareaField, .selectField {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.inputField:focus, .textareaField:focus, .selectField:focus {
+  border-color: #8B5A79;
+}
+
+.textareaField {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitBtn {
+  background-color: #8B5A79;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.submitBtn:hover {
+  background-color: #724962;
+}
+
+/* Right Section - Locations & Quick Support */
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.locationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.locationCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.locationCard h3 {
+  color: #8B5A79;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.locationDetail {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.locationDetail svg {
+  color: #8B5A79;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.locationDetail:last-child {
+  margin-bottom: 0;
+}
+
+.quickSupport {
+  background-color: #2DCA73;
+  border-radius: 12px;
+  padding: 30px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.whatsappIconLarge {
+  font-size: 32px;
+}
+
+.quickSupport h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.quickSupport p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.startChatBtn {
+  background-color: white;
+  color: #2DCA73;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.startChatBtn:hover {
+  transform: translateY(-2px);
+}
+
+/* Appointment Section */
+.appointmentSection {
+  margin-top: 60px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  position: relative;
+  z-index: 2;
+}
+
+.appointmentHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.appointmentHeader h2 {
+  color: #8B5A79;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.appointmentHeader p {
+  color: #666;
+}
+
+/* Counselors Grid */
+.counselorTitle {
+  font-weight: 600;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+.counselorsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.counselorCard {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.counselorCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.counselorAvatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+}
+
+.avatarPink { background: #FF72B6; }
+.avatarBlue { background: #4CC9F0; }
+.avatarGreen { background: #1CC259; }
+.avatarOrange { background: #F07167; }
+
+.counselorCard h4 {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.counselorCard .specialty {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.counselorCard .experience {
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.counselorCard .availability {
+  font-size: 0.8rem;
+  color: #2DCA73;
+  font-weight: 500;
+}
+
+/* DateTime Picker row */
+.dateTimeRow {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .dateTimeRow {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.dateTimeField {
+  margin-bottom: 16px;
+}
+
+.dateTimeLabel {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.dateInputWrapper {
+  position: relative;
+}
+
+.dateInputWrapper input[type="date"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  color: #555;
+  outline: none;
+}
+
+.timeSlots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 500px) {
+  .timeSlots {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.timeSlot {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+}
+
+.timeSlot:hover {
+  border-color: #8B5A79;
+  color: #8B5A79;
+}
+
+.timeSlot.active {
+  background-color: #8B5A79;
+  color: white;
+  border-color: #8B5A79;
+}
+
+.confirmBtn {
+  background-color: #C3A9B7; /* Lighter/muted purple as in image */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 16px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.confirmBtn:hover {
+  background-color: #ad8f9e;
+}
+
+/* Floating Widgets */
+.floatingWidgets {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
+}
+
+.floatingWidget {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.floatingWidget:hover {
+  transform: scale(1.05);
+}
+
+.floatingWidget.whatsapp {
+  background-color: #2DCA73;
+}
+
+.floatingWidget.calendar {
+  background-color: #EFE4EB; /* light brownish/purple */
+  color: #8B5A79; /* icon color */
+}
