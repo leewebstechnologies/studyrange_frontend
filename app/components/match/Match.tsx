@@ -36,8 +36,7 @@ const Match = () => {
                 </select>
               </div>
             </div>
-
-            {/* Bottom single white card */}
+            
             <div className={styles.largeCard}>
               <div className={styles.field}>
                 <label className={styles.label}>Budget Range</label>

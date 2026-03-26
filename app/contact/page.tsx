@@ -25,7 +25,7 @@ const Contact = () => {
       id: 1,
       icon: <Image src="/images/contact/phoneIcon.png" alt="Email" width={24} height={24} />,
       title: "Call Us",
-      desc: "+234 809 999 1995",
+      desc: "+234 703 507 9333",
       bgColor: "#7e436d"
     },
     {
@@ -39,7 +39,7 @@ const Contact = () => {
       id: 3,
       icon: <Image src="/images/contact/whatsappIcon.png" alt="Email" width={24} height={24} />,
       title: "WhatsApp",
-      desc: "+234 809 999 1995",
+      desc: "+234 703 507 9333",
       bgColor: "#25D366"
     },
     {

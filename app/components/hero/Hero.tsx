@@ -2,6 +2,7 @@
 import React from "react";
 import styles from "./hero.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -87,12 +88,15 @@ const Hero = () => {
 
           {/* RIGHT */}
           <div className={styles.heroCardsRight}>
-            <Image
-              src="/images/hero/whatsapp.png"
-              alt="WhatsApp"
-              width={62}
-              height={62}
-            />
+            <Link href="https://wa.me/2348100000000">
+              <Image
+                src="/images/hero/whatsapp.png"
+                alt="WhatsApp"
+                width={62}
+                height={62}
+              />
+            </Link>
+            
 
             <div className={styles.rating}>
               <div className={styles.ratingItems}>

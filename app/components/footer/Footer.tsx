@@ -3,23 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./footer.module.css";
-// import {
-//   Phone,
-//   Mail,
-//   Facebook,
-//   Twitter,
-//   Instagram,
-//   Linkedin,
-// } from "lucide-react";
 
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        {/* TOP GRID */}
         <div className={styles.grid}>
-          {/* BRAND */}
           <div className={styles.brand}>
             <div className={styles.logoRow}>
               <Link href="/" className={styles.logo}>
@@ -89,7 +79,7 @@ const Footer = () => {
 
             <p className={styles.contactItem}>
               <i className="fa-solid fa-phone" style={{ fontSize: "16px" }}></i>
-              +234 809 999 1995
+               +234 703 507 9333
             </p>
 
             <p className={styles.contactItem}>
