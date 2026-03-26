@@ -4,18 +4,16 @@
   background-color: #fbfafb;
   min-height: 100vh;
   padding-bottom: 50px;
+  /* margin-top: 72px; */
 }
 
 .header {
-  padding: 80px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   position: relative;
   overflow: hidden;
-  margin-bottom: 20px;
-  margin-top: 72px;
   height: 288px;
   width: 100%;
   background-color: #f1f1ee;
@@ -450,7 +448,6 @@
 .downloadBtn:hover {
   opacity: 0.9;
 }
-
 
 
 @media (max-width: 900px) {

@@ -288,15 +288,9 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Sticky Quick Actions */}
-      <div className={styles.stickyActions}>
+      {/* Floating Buttons */}
+      <div className={styles.floatingButtons}>
         <FloatingButtons />
-        {/* <button className={styles.stickyWa}>
-          <MessageCircle size={24} color="#fff" />
-        </button>
-        <button className={styles.stickyCal}>
-          <Calendar size={24} color="#7e436d" />
-        </button> */}
       </div>
     </div>
   );

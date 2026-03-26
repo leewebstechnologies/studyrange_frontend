@@ -498,8 +498,8 @@
   background: #93567d;
 }
 
-/* Sticky Action */
-.stickyActions {
+/* Floating Buttons */
+.floatingButtons {
   position: absolute;
   right: 24px;
   bottom: 10px;
