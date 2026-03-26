@@ -409,61 +409,19 @@
   margin: 0;
 }
 
-/* .ready {
-  background-color: #885771;
+.whatsapp {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 80px 272px;
-  color: #fff;
-}
+  justify-content: flex-end;
+  margin-right: 76px;
 
-.buttons {
-  display: flex;
-  gap: 16px;
+  transform: translateY(-129px);
 }
-
-.quoteBtn {
-  align-self: flex-start;
-  background-color: #fff;
-  color: #7e436d;
-  padding: 16px 28px;
-  border-radius: 14px;
-  border: none;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-.quoteBtn:hover {
-  opacity: 0.9;
-}
-
-.contactBtn {
-  border: 2px solid #fff;
-  color: #fff;
-  background-color: #885771;
-  align-self: flex-start;
-  padding: 14px 28px;
-  border-radius: 14px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-.contactBtn:hover {
-  opacity: 0.9;
-} */
-
 .ready {
   background-color: #885771;
   color: #fff;
-  padding: 80px 20px; /* no fixed horizontal padding */
+  padding: 80px 20px;
 }
 
-/* Inner container for proper layout control */
 .readyInner {
   max-width: 900px;
   margin: 0 auto;
@@ -475,7 +433,6 @@
   gap: 20px;
 }
 
-/* Responsive typography */
 .readyInner h2 {
   font-size: clamp(24px, 4vw, 36px);
   font-weight: 700;
@@ -575,5 +532,14 @@
   
   .faqAnswer.open {
     padding: 0 20px 20px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .whatsapp {
+    transform: translateY(-60px);
+    justify-content: center;
+    margin-right: 0;
+    padding-top: 10px;
   }
 }

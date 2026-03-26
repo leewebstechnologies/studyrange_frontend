@@ -11,7 +11,6 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import FloatingButtons from '../components/floatingButtons/FloatingButtons';
 
 const Resources = () => {
   const articles = [
@@ -204,9 +203,6 @@ const Resources = () => {
           </div>
         </section>
       </div>
-
-      {/* Floating Buttons */}
-      <FloatingButtons />
     </div>
   );
 };

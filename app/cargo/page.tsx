@@ -8,9 +8,10 @@ import {
   CheckCircle2, ShieldCheck, Globe, Headset, 
   ChevronDown 
 } from "lucide-react";
+import Link from "next/link";
 // import FloatingButtons from "../components/floatingButtons/FloatingButtons";
 
-export default function Cargo() {
+const Cargo = () => {
   const [activeTab, setActiveTab] = useState("air");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -232,14 +233,14 @@ export default function Cargo() {
           </div>
 
           {/* FAQ Section */}
-          <div className={styles.faqSection}>
-            <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
-            <p className={styles.sectionSubtitle}>Get answers to common cargo shipping questions</p>
+            <div className={styles.faqSection}>
+              <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
+              <p className={styles.sectionSubtitle}>Get answers to common cargo shipping questions</p>
 
-            <div className={styles.faqList}>
-              {faqs.map((faq, i) => (
-                <div className={styles.faqItem} key={i}>
-                  <button 
+              <div className={styles.faqList}>
+                {faqs.map((faq, i) => (
+                  <div className={styles.faqItem} key={i}>
+                    <button 
                     className={styles.faqQuestion} 
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   >
@@ -251,11 +252,17 @@ export default function Cargo() {
                   </div>
                 </div>
               ))}
+             
             </div>
+            
           </div>
-        </div>
+        </div>          
       </div>
-    </div>
+      <Link href="https://wa.me/2348100000000" className={styles.whatsapp}>
+        <Image src="/images/about/whatsapp.png" alt="whatsapp" width={56} height={56} />         
+      </Link>
+      </div>
+       
     <div className={styles.ready}>
       <div className={styles.readyInner}>
         <h2>Ready to Ship Your Cargo</h2>
@@ -271,3 +278,5 @@ export default function Cargo() {
    
   );
 }
+
+export default Cargo;
