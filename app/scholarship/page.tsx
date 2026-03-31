@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import React from 'react';
 import styles from './scholarship.module.css';
 import { 
@@ -14,15 +14,10 @@ import {
   Landmark,
   Eye,
   Briefcase,
-  MessageCircleQuestion,
   CalendarDays,
-  Calendar,
   Zap,
   Ticket
 } from 'lucide-react';
-import { WhatsappLogo } from '@phosphor-icons/react'; // the project has this installed
-import Link from 'next/link';
-import Image from 'next/image';
 import FloatingButtons from '../components/floatingButtons/FloatingButtons';
 
 type StatCardProps = {
@@ -133,12 +128,14 @@ const ScholarshipCard = ({
     </div>
 
     <div className={styles.cardActions}>
-      <button className={styles.btnPrimary}>
-        <Eye size={18} /> View Details
-      </button>
-      <button className={styles.btnSecondary}>
-        <Briefcase size={18} /> Get Help
-      </button>
+     
+        <Link href="/scholarship-details" className={styles.btnPrimary}>
+          <Eye size={18} /> View Details
+        </Link>
+    
+        <Link href="/contact" className={styles.btnSecondary}>
+          <Briefcase size={18} /> Get Help
+        </Link>
     </div>
   </div>
 );

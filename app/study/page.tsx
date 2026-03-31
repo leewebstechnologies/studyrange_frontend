@@ -2,7 +2,7 @@
 
 import React from 'react'
 import styles from './study.module.css'
-import { Target, Percent, Download, CalendarCheck, HelpCircle } from 'lucide-react'
+import { Target, Percent, Download  } from 'lucide-react'
 import Image from "next/image";
 import Link from 'next/link'
 
@@ -40,7 +40,8 @@ const Study = () => {
             </div>
             <h1 className={styles.title}>Use Study Match AI</h1>
             <p className={styles.subtitle}>
-              Our AI-powered engine analyzes your profile to recommend the best universities and programs tailored just for you.
+              Our AI-powered engine analyzes your profile to recommend the best
+              universities and programs tailored just for you.
             </p>
           </div>
 
@@ -50,15 +51,19 @@ const Study = () => {
                 <Target size={22} color="#fff" strokeWidth={1.5} />
               </div>
               <h3 className={styles.featureTitle}>Personalized Matches</h3>
-              <p className={styles.featureDesc}>Get recommendations based on your unique profile and preferences</p>
+              <p className={styles.featureDesc}>
+                Get recommendations based on your unique profile and preferences
+              </p>
             </div>
-            
+
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}>
                 <Percent size={22} color="#fff" strokeWidth={1.5} />
               </div>
               <h3 className={styles.featureTitle}>Acceptance Probability</h3>
-              <p className={styles.featureDesc}>Know your chances of getting accepted at each university</p>
+              <p className={styles.featureDesc}>
+                Know your chances of getting accepted at each university
+              </p>
             </div>
 
             <div className={styles.featureCard}>
@@ -66,7 +71,9 @@ const Study = () => {
                 <Download size={22} color="#fff" strokeWidth={1.5} />
               </div>
               <h3 className={styles.featureTitle}>Downloadable Report</h3>
-              <p className={styles.featureDesc}>Get a comprehensive PDF report with all your matches</p>
+              <p className={styles.featureDesc}>
+                Get a comprehensive PDF report with all your matches
+              </p>
             </div>
           </div>
 
@@ -80,29 +87,31 @@ const Study = () => {
 
       {/* Floating Buttons */}
       <div className={styles.floatingButtons}>
-        <button className={styles.floatingBtnWhatsapp}>
-          <Link href="https://wa.me/+2348099991995">
+        <Link href="https://wa.me/+2347035079333">
+          <button className={styles.floatingBtnWhatsapp}>
             <Image
               src="/images/about/whatsapp.png"
               width={56}
               height={56}
               alt="whatsapp"
               className={styles.whatsapp}
-              />
-          </Link>
-        </button>
-        <button className={styles.floatingBtnCalendar}>
-           <Image
-            src="/images/about/consult.png"
-            width={60}
-            height={58}
-            alt="consult"
-            className={styles.consult}
-          />
-        </button>
+            />
+          </button>
+        </Link>
+        <Link href="/contact">
+          <button className={styles.floatingBtnCalendar}>
+            <Image
+              src="/images/about/consult.png"
+              width={60}
+              height={58}
+              alt="consult"
+              className={styles.consult}
+            />
+          </button>
+        </Link>       
       </div>
     </div>
-  )
+  );
 }
 
 export default Study

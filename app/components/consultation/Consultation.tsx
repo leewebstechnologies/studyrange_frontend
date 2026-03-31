@@ -25,14 +25,18 @@ const Consultation = () => {
           </p>
 
           <div className={styles.actions}>
-            <button className={styles.primaryBtn}>
-              <i className="fa-solid fa-calendar" style={{fontSize: "18px"}}></i>
-              {/* <Calendar size={18} /> */}
-              Book Free Consultation
-            </button>
+            <Link href="/contact">
+              <button className={styles.primaryBtn}>
+                <i
+                  className="fa-solid fa-calendar"
+                  style={{ fontSize: "18px" }}
+                ></i>
+                Book Free Consultation
+              </button>
+            </Link>
 
             <Link href="tel:+44123456789" className={styles.secondaryBtn}>
-               <i className="fa-solid fa-phone" style={{ fontSize: "18px" }}></i>
+              <i className="fa-solid fa-phone" style={{ fontSize: "18px" }}></i>
               Call Now: +44 123 456 789
             </Link>
           </div>

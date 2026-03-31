@@ -135,12 +135,12 @@ const Services = () => {
           <h1 className={styles.title}>Our Services</h1>
           <p className={styles.subtitle}>
             Comprehensive support for every step of your UK education journey. From 
-            University selection to arrival in the UK, we're with you all the way.
+            University selection to arrival in the UK, we&apos;re with you all the way.
           </p>
 
           <div className={styles.floatingActions}>
            
-            <Link href="https://wa.me/+2348099991995">
+            <Link href="https://wa.me/+2347035079333">
               <Image
                 src="/images/about/whatsapp.png"
                 width={56}
@@ -149,8 +149,7 @@ const Services = () => {
                 className={styles.whatsapp}
               />
             </Link>
-          
-           
+            <Link href="/contact">
               <Image
                 src="/images/about/consult.png"
                 width={60}
@@ -158,6 +157,7 @@ const Services = () => {
                 alt="consult"
                 className={styles.consult}
               />
+            </Link>
         
           </div>
         </div>
@@ -257,11 +257,11 @@ const Services = () => {
                   ))}
                 </div>
               </div>
-
-              <button className={styles.ctaButton}>
-                Get Started With Academic Advisory
-              </button>
-
+              <Link href="/contact">
+                <button className={styles.ctaButton}>
+                  Get Started With Academic Advisory
+                </button>
+              </Link>
             </div>
           ))}
         </div>

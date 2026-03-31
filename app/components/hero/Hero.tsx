@@ -53,42 +53,47 @@ const Hero = () => {
               </p>
 
               <div className={styles.actions}>
-                <button className={styles.primary}>
-                  <Image
-                    src="/images/hero/i.png"
-                    alt=""
-                    width={16}
-                    height={20}
-                  />
-                  <span>Try Study Match AI</span>
-                </button>
+                <Link href="/study">
+                  <button className={styles.primary}>
+                    <Image
+                      src="/images/hero/i.png"
+                      alt=""
+                      width={16}
+                      height={20}
+                    />
+                    <span>Try Study Match AI</span>
+                  </button>
+                </Link>
 
-                <button className={styles.secondary}>
-                  <Image
-                    src="/images/hero/consult.png"
-                    alt=""
-                    width={16}
-                    height={20}
-                  />
-                  <span>Book Free Consultation</span>
-                </button>
+                <Link href="/contact">
+                  <button className={styles.secondary}>
+                    <Image
+                      src="/images/hero/consult.png"
+                      alt=""
+                      width={16}
+                      height={20}
+                    />
+                    <span>Book Free Consultation</span>
+                  </button>
+                </Link>
               </div>
-
-              <button className={styles.apply}>
-                <Image
-                  src="/images/hero/apply.png"
-                  alt=""
-                  width={16}
-                  height={20}
-                />
-                <span>Apply Now!</span>
-              </button>
+              <Link href="/contact">
+                <button className={styles.apply}>
+                  <Image
+                    src="/images/hero/apply.png"
+                    alt=""
+                    width={16}
+                    height={20}
+                  />
+                  <span>Apply Now!</span>
+                </button>
+              </Link>
             </div>
           </div>
 
           {/* RIGHT */}
           <div className={styles.heroCardsRight}>
-            <Link href="https://wa.me/2348100000000">
+            <Link href="https://wa.me/2347035079333">
               <Image
                 src="/images/hero/whatsapp.png"
                 alt="WhatsApp"
@@ -96,7 +101,6 @@ const Hero = () => {
                 height={62}
               />
             </Link>
-            
 
             <div className={styles.rating}>
               <div className={styles.ratingItems}>
@@ -112,15 +116,14 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-
-            <div className={styles.consultContainer}>
+            <Link className={styles.consultContainer} href="/contact">
               <Image
                 src="/images/hero/consult.png"
                 alt=""
                 width={27}
                 height={29}
               />
-            </div>
+            </Link>
           </div>
         </div>
       </div>

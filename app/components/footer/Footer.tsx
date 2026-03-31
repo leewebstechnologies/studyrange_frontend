@@ -108,7 +108,7 @@ const Footer = () => {
               </Link>
               <Link
                 className={styles.contactLink}
-                href="https://twitter.com/studyrangeconsult"
+                href="https://x.com/studyrange"
                 target="_blank"
               >
                 <i
@@ -118,7 +118,7 @@ const Footer = () => {
               </Link>
               <Link
                 className={styles.contactLink}
-                href="https://www.instagram.com/studyrangeconsult/"
+                href="https://www.instagram.com/studyrange_consult/profilecard/?igsh=MTNsbWpyemVrcGtoYQ%3D%3D"
                 target="_blank"
               >
                 <i

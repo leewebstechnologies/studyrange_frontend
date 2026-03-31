@@ -1,3 +1,4 @@
+import Link from "next/link"
 import styles from "./scholarshipCard.module.css"
 
 const ScholarshipCard = ({title}: {title: string}) => {
@@ -33,8 +34,16 @@ const ScholarshipCard = ({title}: {title: string}) => {
       </div>
 
       <div className={styles.actions}>
-        <button className={styles.primary}>View Details</button>
-        <button className={styles.secondary}>Get Help</button>
+        <Link href="/scholarship-details">
+          <button className={styles.primary}>
+            View Details
+          </button>
+        </Link>
+        <Link href="/contact">
+          <button className={styles.secondary}>
+            Get Help
+          </button>
+        </Link>
       </div>
     </div>
   )

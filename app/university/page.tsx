@@ -54,12 +54,18 @@ export default function UniversityPage() {
       <div className={styles.searchContainer}>
         <div className={styles.searchInputWrapper}>
           <Search className={styles.searchIcon} size={18} />
-          <input type="text" placeholder="Search universities..." className={styles.searchInput} />
+          <input
+            type="text"
+            placeholder="Search universities..."
+            className={styles.searchInput}
+          />
         </div>
         <div className={styles.dropdowns}>
           <div className={styles.dropdown}>
             <select className={styles.selectDropdown} defaultValue="">
-              <option value="" disabled hidden>All Courses</option>
+              <option value="" disabled hidden>
+                All Courses
+              </option>
               <option value="computer-science">Computer Science</option>
               <option value="business">Business</option>
               <option value="engineering">Engineering</option>
@@ -70,7 +76,9 @@ export default function UniversityPage() {
           </div>
           <div className={styles.dropdown}>
             <select className={styles.selectDropdown} defaultValue="">
-              <option value="" disabled hidden>All Tuition</option>
+              <option value="" disabled hidden>
+                All Tuition
+              </option>
               <option value="under-10k">Under £10,000</option>
               <option value="10k-20k">£10,000 - £20,000</option>
               <option value="20k-30k">£20,000 - £30,000</option>
@@ -80,7 +88,9 @@ export default function UniversityPage() {
           </div>
           <div className={styles.dropdown}>
             <select className={styles.selectDropdown} defaultValue="">
-              <option value="" disabled hidden>All Rankings</option>
+              <option value="" disabled hidden>
+                All Rankings
+              </option>
               <option value="top-10">Top 10</option>
               <option value="top-50">Top 50</option>
               <option value="top-100">Top 100</option>
@@ -93,31 +103,28 @@ export default function UniversityPage() {
       <div className={styles.topLeftCircle}></div>
 
       <div className={styles.mainContent}>
-
-      <div className={styles.topRightCircle}></div>
+        <div className={styles.topRightCircle}></div>
 
         <div className={styles.topSection}>
-         <div className={styles.mapSection}>
-          <div className={styles.mapContainer}>
-    
-          {/* Title INSIDE image */}
-          <h2 className={styles.mapTitle}>University Locations</h2>
+          <div className={styles.mapSection}>
+            <div className={styles.mapContainer}>
+              {/* Title INSIDE image */}
+              <h2 className={styles.mapTitle}>University Locations</h2>
 
-          <Image 
-            src="/images/university/university.jpg" 
-            alt="Map View" 
-            fill
-            className={styles.mapImage}
-          />
+              <Image
+                src="/images/university/university.jpg"
+                alt="Map View"
+                fill
+                className={styles.mapImage}
+              />
 
-          <div className={styles.mapOverlay}></div>
+              <div className={styles.mapOverlay}></div>
 
-          {/* Pins */}
-          <div className={styles.pin} style={{ top: '30%', left: '20%' }}>
-            <div className={styles.pinDot}></div>
-          </div>
-
-          </div>
+              {/* Pins */}
+              <div className={styles.pin} style={{ top: "30%", left: "20%" }}>
+                <div className={styles.pinDot}></div>
+              </div>
+            </div>
           </div>
 
           <div className={styles.statsSection}>
@@ -148,20 +155,22 @@ export default function UniversityPage() {
               <div className={styles.cardHeader}>
                 <h3 className={styles.uniName}>{uni.name}</h3>
                 <div className={styles.imageContainer}>
-                  <Image 
-                    src={uni.image} 
-                    alt={uni.name} 
-                    width={140} 
-                    height={90} 
+                  <Image
+                    src={uni.image}
+                    alt={uni.name}
+                    width={140}
+                    height={90}
                     className={styles.uniImage}
-                    unoptimized 
+                    unoptimized
                   />
                 </div>
               </div>
               <p className={styles.description}>{uni.description}</p>
               <div className={styles.tags}>
                 {uni.tags.map((tag, i) => (
-                  <span key={i} className={styles.tag}>{tag}</span>
+                  <span key={i} className={styles.tag}>
+                    {tag}
+                  </span>
                 ))}
               </div>
               <div className={styles.metrics}>
@@ -190,26 +199,28 @@ export default function UniversityPage() {
 
       {/* Floating Buttons */}
       <div className={styles.floatingButtons}>
-        <button className={styles.floatingBtnWhatsapp}>
-          <Link href="https://wa.me/+2348099991995">
+        <Link href="https://wa.me/+2347035079333">
+          <button className={styles.floatingBtnWhatsapp}>
             <Image
               src="/images/about/whatsapp.png"
               width={56}
               height={56}
               alt="whatsapp"
               className={styles.whatsapp}
-              />
-          </Link>
-        </button>
-        <button className={styles.floatingBtnConsult}>
-           <Image
-            src="/images/about/consult.png"
-            width={60}
-            height={58}
-            alt="consult"
-            className={styles.consult}
-          />
-        </button>
+            />
+          </button>
+        </Link>
+        <Link href="/contact">
+          <button className={styles.floatingBtnConsult}>
+            <Image
+              src="/images/about/consult.png"
+              width={60}
+              height={58}
+              alt="consult"
+              className={styles.consult}
+            />
+          </button>
+        </Link>
       </div>
     </div>
   );

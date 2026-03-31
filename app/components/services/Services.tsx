@@ -2,6 +2,7 @@
 import { services } from "@/app/placeholder-data";
 import styles from "./services.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Services = () => {
   return (
@@ -26,7 +27,9 @@ const Services = () => {
               <p>{item.desc}</p>
             </div>
 
-            <button className={styles.button}>Learn More</button>
+            <Link href="/services">
+              <button className={styles.button}>Learn More</button>
+            </Link>
           </article>
         ))}
       </div>

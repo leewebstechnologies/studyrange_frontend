@@ -65,15 +65,17 @@ const Story = () => {
               </div>
             </div>
           </div>
+          <Link href="/contact">
+            <Image
+              src="/images/about/consult.png"
+              width={60}
+              height={58}
+              alt="consult"
+              className={styles.consult}
+            />
+          </Link>
 
-          <Image
-            src="/images/about/consult.png"
-            width={60}
-            height={58}
-            alt="consult"
-            className={styles.consult}
-          />
-          <Link href="https://wa.me/+2348099991995">
+          <Link href="https://wa.me/+2347035079333">
             <Image
               src="/images/about/whatsapp.png"
               width={56}
