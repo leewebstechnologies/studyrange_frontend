@@ -150,7 +150,7 @@
   gap: clamp(20px, 3vw, 30px);
 }
 
-.number {
+.number, .amount {
   display: block;
   font-size: clamp(24px, 3vw, 32px);
   font-weight: 700;

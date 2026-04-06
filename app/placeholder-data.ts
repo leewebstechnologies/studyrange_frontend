@@ -105,22 +105,22 @@ const partners = [
   },
 ];
 
-const acceptances = [
+const acceptance = [
   {
     id: 1,
     name: "Sarah M.",
     text: "Just got accepted to Cambridge for Computer Science!",
     time: "2 minutes ago",
-    avatar: "/images/acceptance/sarah.png",
+    image: "/images/acceptance/sarah.png",
   },
   {
     id: 2,
     name: "James K.",
     text: "Imperial College London - Engineering with scholarship!",
     time: "5 minutes ago",
-    avatar: "/images/acceptance/james.png",
+    image: "/images/acceptance/james.png",
   },
 ];
 
 
-export { services, choose, successStories, liveAcceptances, acceptances, partners };
+export { services, choose, successStories, liveAcceptances, acceptance, partners };

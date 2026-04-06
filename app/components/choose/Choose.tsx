@@ -8,7 +8,7 @@ const Choose = () => {
     <section className={styles.chooseSection}>
       {/* Heading */}
       <header className={styles.header}>
-        <h2>Why Choose StudyRange Consult?</h2>
+        <h2>Why Choose Studyrange Consult?</h2>
         <p>Your success is our mission</p>
       </header>
 
