@@ -87,12 +87,12 @@ const Footer = () => {
                 className="fa-solid fa-envelope"
                 style={{ fontSize: "16px" }}
               ></i>
-              <Link
+              <a
                 className={styles.contactLink}
                 href="mailto:info@studyrangeconsult.com"
               >
                 <span>info@studyrangeconsult.com</span>
-              </Link>
+              </a>
             </p>
 
             <div className={styles.socials}>
