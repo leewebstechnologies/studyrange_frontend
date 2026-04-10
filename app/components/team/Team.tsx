@@ -14,7 +14,7 @@ const Team = () => {
           <div className={styles.card}>
             <div className={styles.imageWrapper}>
               <Image
-                src="/images/about/md.png"
+                src="/images/team/md.png"
                 alt="Mr. Achiogweme James"
                 width={128}
                 height={128}
@@ -33,7 +33,7 @@ const Team = () => {
           <div className={styles.card}>
             <div className={styles.imageWrapper}>
               <Image
-                src="/images/about/src1.png"
+                src="/images/team/src1.png"
                 alt="Chika Joe Eme"
                 width={128}
                 height={128}
@@ -52,7 +52,7 @@ const Team = () => {
           <div className={styles.card}>
             <div className={styles.imageWrapper}>
               <Image
-                src="/images/about/src1.png"
+                src="/images/team/src1.png"
                 alt="Ifeanyi Kingsley Okeke"
                 width={128}
                 height={128}

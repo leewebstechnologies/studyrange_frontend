@@ -13,7 +13,7 @@ const About = () => {
     <div className={styles.aboutTop}>
       <div className={styles.circleOne}></div>
       <div className={styles.aboutContent}>
-      <h1>About StudyRange Consult</h1>
+      <h1>About Studyrange Consult</h1>
       <p>
         Your trusted partner in UK education since 2019. We&apos;re dedicated
         to making your dream of studying in the UK a reality through expert
