@@ -5,7 +5,7 @@ import styles from "./contact.module.css";
 import { 
   Phone, 
   Mail, 
-  MessageCircle, 
+  // MessageCircle, 
   Clock,
   MapPin,
   Send,
@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import FloatingButtons from '../components/floatingButtons/FloatingButtons';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Contact = () => {
   const [selectedCounselor, setSelectedCounselor] = useState<number | null>(null);
@@ -128,7 +129,8 @@ const Contact = () => {
       <div className={styles.header}>
         <h1 className={styles.title}>Contact Us</h1>
         <p className={styles.subtitle}>
-          We're here to support you on your mental wellness journey. Reach out to us anytime.
+          We&apos;re here to support you on your mental wellness journey. Reach
+          out to us anytime.
         </p>
       </div>
 
@@ -136,11 +138,21 @@ const Contact = () => {
       <div className={styles.methodsGrid}>
         {contactMethods.map((method) => (
           <div key={method.id} className={styles.methodCard}>
-            <div className={styles.methodIcon} style={{ backgroundColor: method.bgColor }}>
+            <div
+              className={styles.methodIcon}
+              style={{ backgroundColor: method.bgColor }}
+            >
               {method.icon}
             </div>
             <h3 className={styles.methodTitle}>{method.title}</h3>
-            <p className={styles.methodDesc} style={{ color: method.title === 'Email Us' ? '#a0567a' : '#666' }}>{method.desc}</p>
+            <p
+              className={styles.methodDesc}
+              style={{
+                color: method.title === "Email Us" ? "#a0567a" : "#666",
+              }}
+            >
+              {method.desc}
+            </p>
           </div>
         ))}
       </div>
@@ -151,24 +163,26 @@ const Contact = () => {
         <div className={styles.formSection}>
           <div className={styles.formCard}>
             <h2 className={styles.formTitle}>Send us a Message</h2>
-            <p className={styles.formSubtitle}>Fill out the form below and we'll get back to you shortly.</p>
-            
+            <p className={styles.formSubtitle}>
+              Fill out the form below and we&apos;ll get back to you shortly.
+            </p>
+
             <form className={styles.contactForm}>
               <div className={styles.inputGroup}>
                 <label>Full Name</label>
                 <input type="text" placeholder="John Doe" />
               </div>
-              
+
               <div className={styles.inputGroup}>
                 <label>Email Address</label>
                 <input type="email" placeholder="john@example.com" />
               </div>
-              
+
               <div className={styles.inputGroup}>
                 <label>Phone Number</label>
                 <input type="tel" placeholder="+44 20 1234 5678" />
               </div>
-              
+
               <div className={styles.inputGroup}>
                 <label>Subject</label>
                 <div className={styles.selectWrapper}>
@@ -180,12 +194,15 @@ const Contact = () => {
                   </select>
                 </div>
               </div>
-              
+
               <div className={styles.inputGroup}>
                 <label>Message</label>
-                <textarea placeholder="Tell us how we can help you..." rows={5}></textarea>
+                <textarea
+                  placeholder="Tell us how we can help you..."
+                  rows={5}
+                ></textarea>
               </div>
-              
+
               <button type="button" className={styles.submitBtn}>
                 Send Message <Send size={16} />
               </button>
@@ -221,11 +238,20 @@ const Contact = () => {
 
           {/* Quick Support Banner */}
           <div className={styles.quickSupport}>
- 
-            <Image src="/images/contact/whatsappIcon.png" alt="Email" width={32} height={36} />
+            <Image
+              src="/images/contact/whatsappIcon.png"
+              alt="Email"
+              width={32}
+              height={36}
+            />
             <h3 className={styles.qsTitle}>Quick Support</h3>
-            <p className={styles.qsDesc}>Chat with us on WhatsApp for instant support</p>
-            <button className={styles.qsBtn}>Start Chat</button>
+            <p className={styles.qsDesc}>
+              Chat with us on WhatsApp for instant support
+            </p>
+            <Link href="https://wa.me/1234567890" target="_blank">
+              <button className={styles.qsBtn}>Start Chat</button>
+            </Link>
+            
           </div>
         </div>
       </div>
@@ -234,19 +260,24 @@ const Contact = () => {
       <div className={styles.bookingSection}>
         <div className={styles.bookingHeader}>
           <h2 className={styles.bookingTitle}>Book an Appointment</h2>
-          <p className={styles.bookingSubtitle}>Choose your counselor, date, and time for your session</p>
+          <p className={styles.bookingSubtitle}>
+            Choose your counselor, date, and time for your session
+          </p>
         </div>
 
         <div className={styles.bookingCard}>
           <h3 className={styles.sectionHeading}>Select Your Counselor</h3>
           <div className={styles.counselorsGrid}>
             {counselors.map((counselor) => (
-              <div 
-                key={counselor.id} 
-                className={`${styles.counselorCard} ${selectedCounselor === counselor.id ? styles.selected : ''}`}
+              <div
+                key={counselor.id}
+                className={`${styles.counselorCard} ${selectedCounselor === counselor.id ? styles.selected : ""}`}
                 onClick={() => setSelectedCounselor(counselor.id)}
               >
-                <div className={styles.counselorIconWrapper} style={{ backgroundColor: counselor.color }}>
+                <div
+                  className={styles.counselorIconWrapper}
+                  style={{ backgroundColor: counselor.color }}
+                >
                   <User size={24} color="#fff" />
                 </div>
                 <h4 className={styles.counselorName}>{counselor.name}</h4>
@@ -270,9 +301,9 @@ const Contact = () => {
               <h3 className={styles.sectionHeading}>Select Time</h3>
               <div className={styles.timeGrid}>
                 {timeSlots.map((time, idx) => (
-                  <button 
-                    key={idx} 
-                    className={`${styles.timeSlot} ${selectedTime === time ? styles.timeSelected : ''}`}
+                  <button
+                    key={idx}
+                    className={`${styles.timeSlot} ${selectedTime === time ? styles.timeSelected : ""}`}
                     onClick={() => setSelectedTime(time)}
                   >
                     {time}
