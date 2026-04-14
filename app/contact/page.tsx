@@ -170,27 +170,28 @@ const Contact = () => {
             <form className={styles.contactForm}>
               <div className={styles.inputGroup}>
                 <label>Full Name</label>
-                <input type="text" placeholder="John Doe" />
+                <input type="text" name="name" placeholder="John Doe" />
               </div>
 
               <div className={styles.inputGroup}>
                 <label>Email Address</label>
-                <input type="email" placeholder="john@example.com" />
+                <input type="email" name="email" placeholder="john@example.com" />
               </div>
 
               <div className={styles.inputGroup}>
                 <label>Phone Number</label>
-                <input type="tel" placeholder="+44 20 1234 5678" />
+                <input type="tel" name="phone" placeholder="+44 20 1234 5678" />
               </div>
 
               <div className={styles.inputGroup}>
                 <label>Subject</label>
                 <div className={styles.selectWrapper}>
-                  <select>
+                  <select name="subject" className={styles.selectInput}>
                     <option value="">Select a subject</option>
                     <option value="general">General Inquiry</option>
                     <option value="support">Support</option>
                     <option value="partnership">Partnership</option>
+                    <option value="others">Other</option>
                   </select>
                 </div>
               </div>
@@ -200,6 +201,7 @@ const Contact = () => {
                 <textarea
                   placeholder="Tell us how we can help you..."
                   rows={5}
+                  name="message"
                 ></textarea>
               </div>
 
