@@ -5,5 +5,6 @@
 
 const API_BASE_URL = "https://admin.studyrangeconsult.com/api";
 const IMAGE_BASE_URL = "https://admin.studyrangeconsult.com";
+const VIDEO_BASE_URL = "https://admin.studyrangeconsult.com/storage";
 
-export { API_BASE_URL, IMAGE_BASE_URL };
+export { API_BASE_URL, IMAGE_BASE_URL, VIDEO_BASE_URL };

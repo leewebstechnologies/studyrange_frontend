@@ -4,7 +4,7 @@ import { Clock, FileText, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import FloatingButtons from "../components/floatingButtons/FloatingButtons";
-import { API_BASE_URL, IMAGE_BASE_URL } from "@/config/config";
+import { API_BASE_URL, IMAGE_BASE_URL, VIDEO_BASE_URL } from "@/config/config";
 import VideoCard from "../components/videoCard/VideoCard";
 
 type ResourceItem = {
@@ -53,7 +53,7 @@ const getResourcetutorial = async (): Promise<ResourcetutorialItem[]> => {
     title: item.title,
     duration: item.duration,
     views: item.views,
-    videoUrl: `${IMAGE_BASE_URL}/storage/${item.videoUrl}`,
+    videoUrl: `${VIDEO_BASE_URL}/storage/${item.videoUrl}`,
   }));
 };
 
