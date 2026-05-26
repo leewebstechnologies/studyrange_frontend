@@ -1,13 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  
+
   images: {
     remotePatterns: [
       {
-        protocol: "http", 
+        protocol: "http",
         hostname: "127.0.0.1",
-        port: "8000",      
+        port: "8000",
       },
       {
         protocol: "http",
@@ -17,6 +17,14 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.studyrangeconsult.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.admin.studyrangeconsult.com",
       }
     ],
     dangerouslyAllowLocalIP: true,
