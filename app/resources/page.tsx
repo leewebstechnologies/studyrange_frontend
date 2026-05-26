@@ -53,7 +53,7 @@ const getResourcetutorial = async (): Promise<ResourcetutorialItem[]> => {
     title: item.title,
     duration: item.duration,
     views: item.views,
-    videoUrl: `${IMAGE_BASE_URL}/${item.videoUrl}`,
+    videoUrl: `${IMAGE_BASE_URL}/storage/${item.videoUrl}`,
   }));
 };
 
