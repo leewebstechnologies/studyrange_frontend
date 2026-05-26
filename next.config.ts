@@ -20,11 +20,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "www.studyrangeconsult.com",
+        hostname: "studyrangeconsult.com",
       },
       {
         protocol: "https",
-        hostname: "www.admin.studyrangeconsult.com",
+        hostname: "admin.studyrangeconsult.com",
       }
     ],
     dangerouslyAllowLocalIP: true,
