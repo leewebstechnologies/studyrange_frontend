@@ -1,7 +1,17 @@
+import { API_BASE_URL } from "@/config/config";
 import styles from "./mv.module.css";
 import Image from "next/image";
 
-const Mv = () => {
+const getStatement = async () => {
+  const res = await fetch(`${API_BASE_URL}/statement`, {
+    cache: "no-store",
+  });
+  const data = await res.json();
+  return data.length > 0 ? data[0] : {};
+};
+
+const Mv = async () => {
+  const statement = await getStatement();
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -19,13 +29,11 @@ const Mv = () => {
 
           <h3 className={styles.titleM}>Our Mission</h3>
 
-          <p className={styles.text}>
-            We have a staff of qualified individuals divided into various teams
-            to support all of your needs. We believe in building long-term
-            connections and will continue to help you in your objectives. Our
-            goal is to support students and enthusiastic immigrants who want to
-            come to the UK to study or for work.
-          </p>
+          <div
+            className={styles.text}
+            dangerouslySetInnerHTML={{ __html: statement.mission }}
+          >
+          </div>
         </article>
 
         {/* Vision */}
@@ -42,11 +50,10 @@ const Mv = () => {
 
           <h3 className={styles.titleV}>Our Vision</h3>
 
-          <p className={styles.text}>
-            Our vision is to become a trusted gateway to opportunity in the
-            United Kingdom by empowering students and aspiring immigrants with
-            expert guidance, reliable support, and enduring partnerships.
-          </p>
+          <div
+            className={styles.text}
+            dangerouslySetInnerHTML={{ __html: statement.vision }}
+          ></div>
         </article>
       </div>
     </section>

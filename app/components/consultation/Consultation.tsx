@@ -1,11 +1,21 @@
-"use client";
+// "use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./consultation.module.css";
-// import { Calendar, Phone } from "lucide-react";
+import { API_BASE_URL } from "@/config/config";
 
-const Consultation = () => {
+const getConsultation = async () => {
+  const res = await fetch(`${API_BASE_URL}/consultation`, {
+    cache: "no-store", // ensures fresh data every time
+  });
+  const data = await res.json();
+  return data.length > 0 ? data[0] : {};
+};
+
+
+const Consultation = async () => {
+  const consultation = await getConsultation();
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -20,8 +30,7 @@ const Consultation = () => {
           />
 
           <p className={styles.text}>
-            Book a free consultation with our expert counselors and get
-            personalized guidance for your study abroad dreams.
+            {consultation.text}
           </p>
 
           <div className={styles.actions}>
@@ -35,9 +44,9 @@ const Consultation = () => {
               </button>
             </Link>
 
-            <Link href="tel:+44123456789" className={styles.secondaryBtn}>
+            <Link href="tel:+/${consultation.link}" className={styles.secondaryBtn}>
               <i className="fa-solid fa-phone" style={{ fontSize: "18px" }}></i>
-              Call Now: +44 123 456 789
+              {consultation.phone}
             </Link>
           </div>
         </div>

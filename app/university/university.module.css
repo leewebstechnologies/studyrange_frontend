@@ -8,91 +8,7 @@
   position: relative;
 }
 
-/* Search Container */
-.searchContainer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
-  padding: 24px 5%;
-  background-color: #fff;
-  z-index: 2;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-}
 
-.searchInputWrapper {
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-  border: 1px solid #e8e8e8;
-  border-radius: 6px;
-  padding: 8px 16px;
-  flex: 1;
-  max-width: 400px;
-  transition: border-color 0.3s ease;
-}
-
-.searchInputWrapper:focus-within {
-  border-color: #997087;
-}
-
-.searchIcon {
-  color: #999;
-  margin-right: 8px;
-}
-
-.searchInput {
-  border: none;
-  outline: none;
-  width: 100%;
-  font-size: 14px;
-  color: #333;
-}
-
-.searchInput::placeholder {
-  color: #bbb;
-}
-
-.dropdowns {
-  display: flex;
-  gap: 16px;
-}
-
-.dropdown {
-  display: flex;
-  align-items: center;
-  position: relative;
-  border: 1px solid #e8e8e8;
-  border-radius: 6px;
-  background-color: #fff;
-  transition: border-color 0.3s ease;
-}
-
-.dropdown:hover {
-  border-color: #d0d0d0;
-}
-
-.selectDropdown {
-  appearance: none;
-  -webkit-appearance: none;
-  border: none;
-  background: transparent;
-  width: 100%;
-  padding: 8px 32px 8px 16px;
-  font-size: 14px;
-  color: #444;
-  cursor: pointer;
-  outline: none;
-  font-family: inherit;
-}
-
-.selectIcon {
-  position: absolute;
-  right: 12px;
-  pointer-events: none;
-  color: #888;
-}
 
 
 .topLeftCircle {
@@ -114,13 +30,13 @@
 
 .topRightCircle {
   position: absolute;
-  top: 10px;          /* aligns under search bar */
-  right: 40px;       /* slightly off screen */
+  top: 10px;       
+  right: 40px;       
   width: 220px;
   height: 220px;
-  background-color: #EAE2D6; /* beige tone from design */
+  background-color: #EAE2D6; 
   border-radius: 50%;
-  z-index: 0;         /* behind the stats card */
+  z-index: 0;        
 }
 
 .bgCircleBottomRight {
@@ -135,7 +51,6 @@
   z-index: 0;
 }
 
-/* Top Section (Map & Box Stats) */
 .topSection {
   display: flex;
   gap: 40px;
@@ -195,7 +110,6 @@
   pointer-events: none;
 }
 
-/* Map Pins */
 .pin {
   position: absolute;
   width: 22px;
@@ -235,7 +149,6 @@
   border-color: #8D5A7B transparent transparent transparent;
 }
 
-/* Stats Cards Right Side */
 .statsSection {
   flex: 1;
   background: #fff;
@@ -394,25 +307,6 @@
   color: #999;
 }
 
-.viewBtn {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(90deg, #8D5A7B, #A79576);
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: opacity 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  font-size: 14px;
-}
-
-.viewBtn:hover {
-  opacity: 0.95;
-  box-shadow: 0 6px 15px rgba(141, 90, 123, 0.3);
-  transform: translateY(-1px);
-}
-
 .floatingButtons {    
   bottom: 30px;
   right: 30px;
@@ -445,21 +339,7 @@
   .grid {
     grid-template-columns: 1fr;
   }
-  .searchContainer {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .searchInputWrapper {
-    max-width: 100%;
-  }
-  .dropdowns {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .dropdown {
-    flex: 1;
-    justify-content: center;
-  }
+
   .bgCircleTopLeft, .bgCircleBottomRight {
     display: none;
   }

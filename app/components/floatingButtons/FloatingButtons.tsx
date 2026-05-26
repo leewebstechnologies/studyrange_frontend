@@ -2,11 +2,22 @@ import React from 'react'
 import styles from "./floatingButtons.module.css";
 import Link from 'next/link';
 import Image from 'next/image';
+import { API_BASE_URL } from '@/config/config';
 
-const FloatingButtons = () => {
+
+const getFloatingbutton = async () => {
+  const res = await fetch(`${API_BASE_URL}/floatingbutton`, {
+    cache: "no-store", // ensures fresh data every time
+  });
+  const data = await res.json();
+  return data.length > 0 ? data[0] : {};
+};
+
+const FloatingButtons = async () => {
+  const floatingbutton = await getFloatingbutton();
   return (
     <div className={styles.floatingButtons}>
-      <Link href="https://wa.me/+2347035079333">
+       <Link href={`https://wa.me/${floatingbutton.whatsapp}`}>
         <button className={styles.floatingBtnWhatsapp}>
           <Image
             src="/images/about/whatsapp.png"

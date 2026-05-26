@@ -1,8 +1,16 @@
-"use client";
+import { API_BASE_URL } from "@/config/config";
 import styles from "./value.module.css";
 import Image from "next/image";
 
-const Value = () => {
+  const getValue = async () => {
+  const res = await fetch(`${API_BASE_URL}/value`, {
+    cache: "no-store", // ensures fresh data every time
+  });
+   return await res.json();
+}
+
+const Value = async () => {
+   const value = await getValue();
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -19,10 +27,9 @@ const Value = () => {
                 height={32}
               />
             </div>
-            <h3 className={styles.cardTitle}>Excellence</h3>
+            <h3 className={styles.cardTitle}>{value[0].title}</h3>
             <p className={styles.cardText}>
-              We strive for perfection in everything we do, delivering
-              exceptional results that exceed expectations.
+             {value[0].description}
             </p>
           </div>
 
@@ -36,10 +43,9 @@ const Value = () => {
                 height={32}
               />
             </div>
-            <h3 className={styles.cardTitle}>Integrity</h3>
+            <h3 className={styles.cardTitle}>{value[1].title}</h3>
             <p className={styles.cardText}>
-              Honesty and transparency guide our relationships, building trust
-              through authentic communication.
+             {value[1].description}
             </p>
           </div>
 
@@ -53,10 +59,9 @@ const Value = () => {
                 height={32}
               />
             </div>
-            <h3 className={styles.cardTitle}>Student-Centric</h3>
+            <h3 className={styles.cardTitle}>{value[2].title}</h3>
             <p className={styles.cardText}>
-              Every decision we make prioritizes student success and their
-              unique educational journey.
+              {value[2].description}
             </p>
           </div>
 
@@ -70,10 +75,9 @@ const Value = () => {
                 height={32}
               />
             </div>
-            <h3 className={styles.cardTitle}>Global Perspective</h3>
+            <h3 className={styles.cardTitle}>{value[3].title}</h3>
             <p className={styles.cardText}>
-              We embrace diversity and cultural understanding in our approach to
-              international education.
+              {value[3].description}
             </p>
           </div>
         </div>

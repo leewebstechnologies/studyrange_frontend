@@ -1,0 +1,248 @@
+.legalPage {
+  background-color: #f9fafb;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  font-family: inherit;
+  color: #374151;
+}
+
+/* Background blob decorations for a premium look */
+.backgroundBlob {
+  position: absolute;
+  top: 10%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background-color: rgba(189, 150, 169, 0.2);
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.topLeftCircle {
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: rgba(126, 67, 109, 0.1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #7e436d, #9a6f5f);
+  color: white;
+  padding: 80px 24px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -0.025em;
+}
+
+.lastUpdated {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 16px;
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+  font-weight: 500;
+}
+
+/* Main Layout */
+.layoutContainer {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.sidebarCard {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f3f4f6;
+}
+
+.sidebarTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #7e436d;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #f3f4f6;
+  padding-bottom: 8px;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.navLink {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  display: block;
+  line-height: 1.4;
+}
+
+.navLink:hover {
+  color: #7e436d;
+  transform: translateX(4px);
+}
+
+/* Content Area */
+.contentCard {
+  background: white;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f3f4f6;
+}
+
+.section {
+  scroll-margin-top: 100px;
+}
+
+.section:not(:last-child) {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 40px;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  color: #7e436d;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.section p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+.section ul {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.section li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.contactBox {
+  background: #fdf2f8;
+  border-left: 4px solid #7e436d;
+  padding: 20px;
+  border-radius: 0 12px 12px 0;
+  margin-top: 24px;
+}
+
+.contactBox p {
+  margin-bottom: 8px;
+}
+
+.contactBox a {
+  color: #7e436d;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .layoutContainer {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin: 40px auto;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .navList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .navLink {
+    background: #f3f4f6;
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
+
+  .navLink:hover {
+    background: #fdf2f8;
+    transform: none;
+  }
+
+  .contentCard {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .contentCard {
+    padding: 24px;
+  }
+
+  .section h2 {
+    font-size: 1.35rem;
+  }
+
+  .navList {
+    gap: 8px;
+  }
+
+  .navLink {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}

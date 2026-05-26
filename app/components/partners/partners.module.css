@@ -54,15 +54,18 @@
 /* LOGO */
 
 .logo {
-  width: 90px;
-  height: 90px;
-  display: grid;
-  place-items: center;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1rem;
 }
 
-.logo {
+.logoImage {
   object-fit: contain;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* TEXT */

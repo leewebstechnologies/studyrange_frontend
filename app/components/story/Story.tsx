@@ -1,48 +1,45 @@
-"use client";
+// "use client";
 import Link from "next/link";
 import styles from "./story.module.css";
 import Image from "next/image";
+import { API_BASE_URL, IMAGE_BASE_URL } from "@/config/config";
 
-const Story = () => {
+const getAbout_rating = async () => {
+  const res = await fetch(`${API_BASE_URL}/about_rating`, {
+    cache: "no-store", // ensures fresh data every time
+  });
+  const data = await res.json();
+  return data.length > 0 ? data[0] : {};
+};
+
+const getStory = async () => {
+  const res = await fetch(`${API_BASE_URL}/about`, {
+    cache: "no-store",
+  });
+  const data = await res.json();
+  return data.length > 0 ? data[0] : {};
+};
+
+const Story = async () => {
+  const about_rating = await getAbout_rating();
+  const about = await getStory();
   return (
     <section className={styles.story}>
       {/* LEFT */}
       <div className={styles.storyLeft}>
         <h2 className={styles.title}>Our Story</h2>
 
-        <p className={styles.paragraph}>
-          Studyrange Consult is an education consultancy establishment which
-          provides quality counselling and application services for
-          international students wishing to study at high schools, colleges and
-          universities in the United Kingdom.
-        </p>
-
-        <p className={styles.paragraph}>
-          Since 2019, Studyrange consult has been committed to providing
-          international students with guidance and support every step of the
-          way. Our focus on your individual needs allows us to match you to the
-          best institution and course, based on your personal academic goals.
-        </p>
-
-        <p className={styles.paragraph}>
-          We also provide visa and travel assistance, as well as accommodation
-          support. This level of customized guidance ensures that your
-          transition to a new environment is smooth and maximizes your chances
-          of being accepted into top UK institutions.
-        </p>
-
-        <p className={styles.paragraph}>
-          Studyrange has wealth of experience in assisting students to meet
-          their study abroad dreams with professional counsellors who understand
-          the UK education system.
-        </p>
+        <div
+          className={styles.paragraph}
+          dangerouslySetInnerHTML={{ __html: about.story }}
+        />
       </div>
 
       {/* RIGHT */}
       <div className={styles.storyRight}>
         <div className={styles.frame}>
           <Image
-            src="/images/about/graduates.png"
+            src={`${IMAGE_BASE_URL}/${about.image}`}
             width={500}
             height={500}
             alt="graduates"
@@ -60,8 +57,10 @@ const Story = () => {
                 height={48}
               />
               <div className={styles.ratingText}>
-                <span className={styles.ratingNumber}>4.9/5</span>
-                <p>Student Rating</p>
+                <span className={styles.ratingNumber}>
+                  {about_rating.rating}
+                </span>
+                <p>{about_rating.description}</p>
               </div>
             </div>
           </div>
@@ -75,7 +74,7 @@ const Story = () => {
             />
           </Link>
 
-          <Link href="https://wa.me/+2347035079333">
+          <Link href={`https://wa.me/${about_rating.phone}`}>
             <Image
               src="/images/about/whatsapp.png"
               width={56}

@@ -1,5 +1,3 @@
-"use client";
-import Link from "next/link";
 import React from 'react';
 import styles from './scholarship.module.css';
 import { 
@@ -7,13 +5,8 @@ import {
   PoundSterling, 
   TrendingUp, 
   Heart,
-  Search,
-  Filter,
-  ChevronDown,
   CheckCircle2,
   Landmark,
-  Eye,
-  Briefcase,
   CalendarDays,
   Zap,
   Ticket
@@ -128,14 +121,7 @@ const ScholarshipCard = ({
     </div>
 
     <div className={styles.cardActions}>
-     
-        <Link href="/scholarship-details" className={styles.btnPrimary}>
-          <Eye size={18} /> View Details
-        </Link>
-    
-        <Link href="/contact" className={styles.btnSecondary}>
-          <Briefcase size={18} /> Get Help
-        </Link>
+     <p>Updated information can be found on scholarship website</p>
     </div>
   </div>
 );
@@ -234,40 +220,6 @@ const Scholarship = () => {
             label="Saved Scholarships" 
             colorClass="red" 
           />
-        </div>
-
-        {/* Filters */}
-        <div className={styles.filterSection}>
-          <div className={styles.filterRow}>
-            <div className={styles.inputGroup}>
-              <Search className={styles.inputIcon} size={20} />
-              <input type="text" placeholder="Search scholarships..." />
-            </div>
-            <div className={styles.inputGroup}>
-              <Filter className={styles.inputIcon} size={20} />
-              <input type="text" placeholder="Filter by keywords..." />
-            </div>
-          </div>
-          <div className={styles.filterRow}>
-            <div className={styles.selectGroup}>
-              <select defaultValue="">
-                <option value="" disabled hidden>All Categories</option>
-                <option value="undergraduate">Undergraduate</option>
-                <option value="postgraduate">Postgraduate</option>
-                <option value="phd">PhD</option>
-              </select>
-              <ChevronDown className={styles.selectIcon} size={20} />
-            </div>
-            <div className={styles.selectGroup}>
-              <select defaultValue="">
-                <option value="" disabled hidden>Award Amount</option>
-                <option value="5k">Up to £5,000</option>
-                <option value="10k">£5,000 - £10,000</option>
-                <option value="plus10k">£10,000+</option>
-              </select>
-              <ChevronDown className={styles.selectIcon} size={20} />
-            </div>
-          </div>
         </div>
 
         {/* Scholarships List */}

@@ -1,15 +1,24 @@
-"use client";
-import React from "react";
 import styles from "./hero.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { API_BASE_URL, IMAGE_BASE_URL } from "@/config/config";
+import Card from "../card/Card";
 
-const Hero = () => {
+const getHero = async () => {
+  const res = await fetch(`${API_BASE_URL}/hero`, {
+    cache: "no-store", // ensures fresh data every time
+  });
+  const data = await res.json();
+  return data.length > 0 ? data[0] : {};
+};
+
+const Hero = async () => {
+  const hero = await getHero();
   return (
     <section className={styles.hero}>
       {/* Background image */}
       <Image
-        src="/images/hero/hero-bg.png"
+       src={`${IMAGE_BASE_URL}/${hero.image}`}
         alt="Hero background"
         fill
         priority
@@ -25,75 +34,17 @@ const Hero = () => {
             width={18}
             height={24}
           />
-          <span>Trusted by 2,500+ Students</span>
+          <span>{hero.client}</span>
         </div>
 
         <div className={styles.heroCardsRow}>
-          {/* LEFT */}
-          <div className={styles.heroCardsLeft}>
-            <div className={styles.heroCardsLeftContents}>
-              <div className={styles.heroCardLabel}>
-                <Image
-                  src="/images/hero/star.png"
-                  alt="star"
-                  width={18}
-                  height={24}
-                />
-                <span>Your Journey to UK Education Starts Here</span>
-              </div>
+          {/* LEFT */}        
+          <Card />
 
-              <h1 className={styles.heroCardTopText}>
-                Transform Your Future with Expert Education Consultancy
-              </h1>
-
-              <p className={styles.heroCardBottomText}>
-                Since 2019, Studyrange Consult has guided thousands of students
-                to their dream UK universities through expert counselling, full
-                application support, and visa guidance.
-              </p>
-
-              <div className={styles.actions}>
-                <Link href="/study">
-                  <button className={styles.primary}>
-                    <Image
-                      src="/images/hero/i.png"
-                      alt=""
-                      width={16}
-                      height={20}
-                    />
-                    <span>Try Study Match AI</span>
-                  </button>
-                </Link>
-
-                <Link href="/contact">
-                  <button className={styles.secondary}>
-                    <Image
-                      src="/images/hero/consult.png"
-                      alt=""
-                      width={16}
-                      height={20}
-                    />
-                    <span>Book Free Consultation</span>
-                  </button>
-                </Link>
-              </div>
-              <Link href="/contact">
-                <button className={styles.apply}>
-                  <Image
-                    src="/images/hero/apply.png"
-                    alt=""
-                    width={16}
-                    height={20}
-                  />
-                  <span>Apply Now!</span>
-                </button>
-              </Link>
-            </div>
-          </div>
 
           {/* RIGHT */}
           <div className={styles.heroCardsRight}>
-            <Link href="https://wa.me/2347035079333">
+            <Link href={`https://wa.me/${hero.phone}`}>
               <Image
                 src="/images/hero/whatsapp.png"
                 alt="WhatsApp"
@@ -111,7 +62,7 @@ const Hero = () => {
                   height={64}
                 />
                 <div>
-                  <span className={styles.ratingNumber}>4.9</span>
+                  <span className={styles.ratingNumber}>{hero.rating}</span>
                   <p>Student Rating</p>
                 </div>
               </div>

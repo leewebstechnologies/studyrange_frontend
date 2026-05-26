@@ -5,32 +5,39 @@ import Team from "../components/team/Team";
 import styles from "./about.module.css";
 import Journey from "../components/journey/Journey";
 import OurPartners from "../components/ourPartners/OurPartners";
+import { API_BASE_URL } from "@/config/config";
+
+const getAbout = async () => {
+  const res = await fetch(`${API_BASE_URL}/about`, {
+    cache: "no-store", // ensures fresh data every time
+  });
+  const data = await res.json();
+  return data.length > 0 ? data[0] : {};
+};
 
 
-const About = () => {
+const About = async () => {
+  const about = await getAbout();
   return (
     <>
-    <div className={styles.aboutTop}>
-      <div className={styles.circleOne}></div>
-      <div className={styles.aboutContent}>
-      <h1>About Studyrange Consult</h1>
-      <p>
-        Your trusted partner in UK education since 2019. We&apos;re dedicated
-        to making your dream of studying in the UK a reality through expert
-        guidance and personalized support
-      </p>
+      <div className={styles.aboutTop}>
+        <div className={styles.circleOne}></div>
+        <div className={styles.aboutContent}>
+          <h1>About Studyrange Global Services & Consult</h1>
+          <p>
+           {about.title}
+          </p>
+        </div>
+
+        <div className={styles.circleTwo}></div>
       </div>
-     
-      <div className={styles.circleTwo}></div>
-    </div>
-    <Story />
-    <Mv />
-    <Value />
-    <Team />
-    <Journey />
-    <OurPartners />
+      <Story />
+      <Mv />
+      <Value />
+      <Team />
+      <Journey />
+      <OurPartners />
     </>
-    
   );
-}
-export default About
+};
+export default About;

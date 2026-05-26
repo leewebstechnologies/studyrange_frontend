@@ -1,0 +1,48 @@
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.03);
+}
+
+.card h2 {
+  font-size: 20px;
+  color: #93567d;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* Buttons */
+.grid button {
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.grid button:hover {
+  border-color: #93567d;
+  color: #93567d;
+}
+
+/* Active state */
+.active {
+  background: #93567d;
+  color: #fff;
+  border-color: #93567d;
+}
+
+.active:hover {
+  color: #fff;
+}
