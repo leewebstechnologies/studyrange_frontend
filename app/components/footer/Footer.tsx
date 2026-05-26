@@ -101,7 +101,7 @@ const Footer = async () => {
               ></i>
               <Link
                 className={styles.contactLink}
-                href="mailto:info@studyrangeconsult.com"
+                href="mailto:enquiries@studyrangeconsult.com"
               >
                 <span>{footer.email}</span>
               </Link>
