@@ -120,9 +120,7 @@ const ScholarshipCard = ({
       ))}
     </div>
 
-    <div className={styles.cardActions}>
-     <p>Updated information can be found on scholarship website</p>
-    </div>
+    <div className={styles.cardActions}><p>Updated information can be found on scholarship website</p></div>
   </div>
 );
 

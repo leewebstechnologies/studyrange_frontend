@@ -276,9 +276,10 @@
 }
 
 .cardActions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: #666;
 }
 
 .btnPrimary, .btnSecondary {

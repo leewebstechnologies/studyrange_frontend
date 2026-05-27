@@ -48,13 +48,23 @@ const getResourcetutorial = async (): Promise<ResourcetutorialItem[]> => {
 
   const data = await res.json();
 
-  return data.map((item: ResourcetutorialItem) => ({
-    id: item.id,
-    title: item.title,
-    duration: item.duration,
-    views: item.views,
-    videoUrl: `${IMAGE_BASE_URL}/storage/${item.videoUrl}`,
-  }));
+  return data.map((item: ResourcetutorialItem) => {
+    let finalVideoUrl = item.videoUrl;
+    
+    if (finalVideoUrl && !finalVideoUrl.startsWith('http')) {
+      // Remove leading slash or 'storage/' to prevent paths like /storage/storage/...
+      const cleanPath = finalVideoUrl.replace(/^\/?(storage\/)?/, '');
+      finalVideoUrl = `${IMAGE_BASE_URL}/storage/${cleanPath}`;
+    }
+
+    return {
+      id: item.id,
+      title: item.title,
+      duration: item.duration,
+      views: item.views,
+      videoUrl: finalVideoUrl,
+    };
+  });
 };
 
 const getGuides = async (): Promise<GuideItem[]> => {
