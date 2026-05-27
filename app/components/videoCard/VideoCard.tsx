@@ -35,8 +35,9 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
         <video
           ref={videoRef}
           className={styles.videoImg}
-          src={video.videoUrl}
+          src={`${video.videoUrl}#t=0.001`}
           preload="metadata"
+          playsInline
           onEnded={() => setIsPlaying(false)}
         />
 
