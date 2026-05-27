@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import styles from "./videoCard.module.css";
-import { Play } from "lucide-react";
+import { Play, Pause } from "lucide-react";
 
 interface VideoCardProps {
   video: {
@@ -18,66 +18,45 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const togglePlay = async () => {
-    if (!videoRef.current) return;
-
-    try {
-      if (videoRef.current.paused) {
-        await videoRef.current.play();
-        setIsPlaying(true);
-      } else {
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
         videoRef.current.pause();
-        setIsPlaying(false);
+      } else {
+        videoRef.current.play();
       }
-    } catch (err) {
-      console.error("Playback error:", err);
+      setIsPlaying(!isPlaying);
     }
   };
 
   return (
-    <div className={styles.videoCard}>
-      <div
-        className={styles.videoImgWrapper}
-        onClick={togglePlay}
-      >
+    <div className={styles.videoCard} onClick={togglePlay}>
+      <div className={styles.videoImgWrapper}>
         <video
           ref={videoRef}
           className={styles.videoImg}
-          playsInline
+          src={video.videoUrl}
           preload="metadata"
-          muted
-          controls
-          width="100%"
-        >
-          <source
-            src={video.videoUrl}
-            type="video/mp4"
-          />
-        </video>
+          onEnded={() => setIsPlaying(false)}
+        />
 
+        <div
+          className={`${styles.videoImgOverlay} ${isPlaying ? styles.hidden : ""}`}
+        />
         {!isPlaying && (
-          <>
-            <div className={styles.videoImgOverlay} />
-
-            <div className={styles.playBtn}>
-              <Play size={20} />
-            </div>
-
-            <span className={styles.videoDuration}>
-              {video.duration}
-            </span>
-          </>
+          <span className={styles.videoDuration}>{video.duration}</span>
         )}
+
+        <div
+          className={`${styles.playBtn} ${isPlaying ? styles.isPlaying : ""}`}
+        >
+          {isPlaying ? <Pause size={20} /> : <Play size={20} />}
+        </div>
       </div>
 
       <div className={styles.videoContent}>
-        <h3 className={styles.videoTitle}>
-          {video.title}
-        </h3>
-
-        <p className={styles.videoViews}>
-          {video.views}
-        </p>
+        <h3 className={styles.videoTitle}>{video.title}</h3>
+        <p className={styles.videoViews}>{video.views}</p>
       </div>
     </div>
   );
