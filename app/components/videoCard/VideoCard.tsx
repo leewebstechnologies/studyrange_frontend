@@ -35,10 +35,13 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
         <video
           ref={videoRef}
           className={styles.videoImg}
-          src={video.videoUrl}
           preload="metadata"
+          playsInline
+          controls={isPlaying}
           onEnded={() => setIsPlaying(false)}
-        />
+        >
+          <source src={video.videoUrl} type="video/mp4" />
+        </video>
 
         <div
           className={`${styles.videoImgOverlay} ${isPlaying ? styles.hidden : ""}`}
