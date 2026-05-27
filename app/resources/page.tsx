@@ -57,7 +57,7 @@ const getResourcetutorial = async (): Promise<ResourcetutorialItem[]> => {
     title: item.title,
     duration: item.duration,
     views: item.views,
-    videoUrl: item.videoUrl.startsWith("http")
+    videoUrl: item.videoUrl.startsWith("https")
     ? item.videoUrl
     : `${VIDEO_BASE_URL}/${item.videoUrl}`,
     }));
