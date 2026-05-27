@@ -4,7 +4,7 @@ import { Clock, FileText, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import FloatingButtons from "../components/floatingButtons/FloatingButtons";
-import { API_BASE_URL, IMAGE_BASE_URL } from "@/config/config";
+import { API_BASE_URL, IMAGE_BASE_URL, VIDEO_BASE_URL } from "@/config/config";
 import VideoCard from "../components/videoCard/VideoCard";
 
 type ResourceItem = {
@@ -52,9 +52,9 @@ const getResourcetutorial = async (): Promise<ResourcetutorialItem[]> => {
     let finalVideoUrl = item.videoUrl;
     
     if (finalVideoUrl && !finalVideoUrl.startsWith('http')) {
-      // Remove leading slash or 'storage/' to prevent paths like /storage/storage/...
-      const cleanPath = finalVideoUrl.replace(/^\/?(storage\/)?/, '');
-      finalVideoUrl = `${IMAGE_BASE_URL}/storage/${cleanPath}`;
+      // Remove any leading slash so it appends cleanly to VIDEO_BASE_URL
+      const cleanPath = finalVideoUrl.replace(/^\/?/, '');
+      finalVideoUrl = `${VIDEO_BASE_URL}/${cleanPath}`;
     }
 
     return {
