@@ -57,8 +57,10 @@ const getResourcetutorial = async (): Promise<ResourcetutorialItem[]> => {
     title: item.title,
     duration: item.duration,
     views: item.views,
-    videoUrl: `${VIDEO_BASE_URL}/${item.videoUrl}`,
-  }));
+    videoUrl: item.videoUrl.startsWith("http")
+    ? item.videoUrl
+    : `${VIDEO_BASE_URL}/${item.videoUrl}`,
+    }));
 };
 
 const getGuides = async (): Promise<GuideItem[]> => {
