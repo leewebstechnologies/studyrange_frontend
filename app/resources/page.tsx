@@ -52,8 +52,8 @@ const getResourcetutorial = async (): Promise<ResourcetutorialItem[]> => {
     let finalVideoUrl = item.videoUrl;
     
     if (finalVideoUrl && !finalVideoUrl.startsWith('http')) {
-      // Remove any leading slash so it appends cleanly to VIDEO_BASE_URL
-      const cleanPath = finalVideoUrl.replace(/^\/?/, '');
+      // Remove leading slash or "storage/" to prevent duplicate /storage/storage/ paths
+      const cleanPath = finalVideoUrl.replace(/^\/?(storage\/)?/, '');
       finalVideoUrl = `${VIDEO_BASE_URL}/${cleanPath}`;
     }
 
